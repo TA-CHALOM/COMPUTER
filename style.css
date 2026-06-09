@@ -134,6 +134,15 @@ a { text-decoration: none; color: inherit; }
 .btn-danger.full  { width: 100%; justify-content: center; padding: .65rem; }
 .btn-danger.small { padding: .5rem 1.2rem; font-size: .85rem; }
 
+.btn-refresh {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: #1a6a3a; color: #fff; border: none; border-radius: var(--radius-sm);
+  font-family: var(--font); font-weight: 600; cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+.btn-refresh:hover { background: #145530; transform: translateY(-1px); }
+.btn-refresh.small { padding: .5rem 1.2rem; font-size: .85rem; }
+
 /* ============================================================ LAYOUT */
 .section-wrapper { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
 .section-label { display: inline-block; background: var(--navy); color: var(--gold); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem 1rem; border-radius: 50px; margin-bottom: 1.25rem; }

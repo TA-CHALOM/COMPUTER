@@ -349,15 +349,16 @@ function saveProduct() {
   if (id) {
     const idx = products.findIndex(p => p.id === id);
     if (idx > -1) products[idx] = obj;
-    showToast('✅ แก้ไขสินค้าสำเร็จ', 'success');
+    showToast('✅ แก้ไขสินค้าสำเร็จ – กำลังรีเฟรช…', 'success');
   } else {
     products.push(obj);
-    showToast('✅ เพิ่มสินค้าสำเร็จ', 'success');
+    showToast('✅ เพิ่มสินค้าสำเร็จ – กำลังรีเฟรช…', 'success');
   }
   lsSet(KEYS.products, products);
   closeModal('productModal');
   renderAdminPanel();
   renderShop();
+  setTimeout(() => window.location.reload(), 900);
 }
 window.saveProduct = saveProduct;
 
@@ -467,15 +468,16 @@ function saveService() {
   if (id) {
     const idx = list.findIndex(x => x.id === id);
     if (idx > -1) list[idx] = obj;
-    showToast('✅ แก้ไขสำเร็จ', 'success');
+    showToast('✅ แก้ไขสำเร็จ – กำลังรีเฟรช…', 'success');
   } else {
     list.push(obj);
-    showToast('✅ เพิ่มรายการสำเร็จ', 'success');
+    showToast('✅ เพิ่มรายการสำเร็จ – กำลังรีเฟรช…', 'success');
   }
   setServiceList(type, list);
   closeModal('serviceModal');
   renderServiceTable(type);
   renderServiceContent();
+  setTimeout(() => window.location.reload(), 900);
 }
 window.saveService = saveService;
 
@@ -506,7 +508,8 @@ function confirmDelete() {
   }
   deleteTargetId = null; deleteTargetType = null;
   closeModal('deleteModal');
-  showToast('🗑️ ลบสำเร็จ', 'danger');
+  showToast('🗑️ ลบสำเร็จ – กำลังรีเฟรช…', 'danger');
+  setTimeout(() => window.location.reload(), 900);
 }
 window.confirmDelete = confirmDelete;
 
@@ -607,8 +610,9 @@ function uploadMedia(type, input) {
       applyLogo(base64);
     }
     saveMedia(media);
-    showToast('✅ อัปโหลดสำเร็จ', 'success');
+    showToast('✅ อัปโหลดสำเร็จ – กำลังรีเฟรช…', 'success');
     input.value = '';
+    setTimeout(() => window.location.reload(), 900);
   });
 }
 window.uploadMedia = uploadMedia;
@@ -633,8 +637,9 @@ function uploadGallery(galleryKey, input) {
         saveMedia(media);
         renderMediaAdmin();
         renderGalleries();
-        showToast(`✅ เพิ่มรูป ${files.length} ภาพสำเร็จ`, 'success');
+        showToast(`✅ เพิ่มรูป ${files.length} ภาพสำเร็จ – กำลังรีเฟรช…`, 'success');
         input.value = '';
+        setTimeout(() => window.location.reload(), 900);
       }
     });
   });
@@ -647,7 +652,8 @@ function deleteGalleryImg(galleryKey, index) {
   saveMedia(media);
   renderMediaAdmin();
   renderGalleries();
-  showToast('🗑️ ลบรูปแล้ว');
+  showToast('🗑️ ลบรูปแล้ว – กำลังรีเฟรช…');
+  setTimeout(() => window.location.reload(), 900);
 }
 window.deleteGalleryImg = deleteGalleryImg;
 
@@ -658,7 +664,8 @@ function saveVideoUrl(key) {
   media.videos[key] = url;
   saveMedia(media);
   renderVideos();
-  showToast('✅ บันทึก URL วิดีโอแล้ว', 'success');
+  showToast('✅ บันทึก URL วิดีโอแล้ว – กำลังรีเฟรช…', 'success');
+  setTimeout(() => window.location.reload(), 900);
 }
 window.saveVideoUrl = saveVideoUrl;
 
