@@ -886,3 +886,43 @@ p  { color: var(--gray-600); }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   [data-aos] { opacity: 1 !important; transform: none !important; }
 }
+
+/* ============================================================
+   LOGO – Brand & Hero & Footer
+   ============================================================ */
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--orange);
+}
+.hero-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.hero-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--orange);
+  box-shadow: 0 0 32px rgba(249,115,22,0.3);
+}
+.footer-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--orange);
+  flex-shrink: 0;
+}
+.admin-link {
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  transition: color var(--transition);
+  text-decoration: none;
+}
+.admin-link:hover { color: var(--orange); }
