@@ -14,28 +14,27 @@
   <header class="navbar" id="navbar">
     <div class="nav-inner">
       <div class="brand">
-        <img src="logo.jpg" alt="ท่าฉลอมคอมพิวเตอร์ Logo" class="nav-logo" />
+        <img src="logo.jpg" alt="ท่าฉลอมคอมพิวเตอร์" class="nav-logo" />
         <span class="brand-name">ท่าฉลอมคอมพิวเตอร์</span>
       </div>
-      <nav class="nav-tabs">
+      <nav class="nav-tabs" id="navTabs">
         <button class="tab-btn active" data-tab="home">🏠 หน้าหลัก</button>
         <button class="tab-btn" data-tab="repair">🔧 งานซ่อม</button>
         <button class="tab-btn" data-tab="network">🌐 เครือข่าย</button>
         <button class="tab-btn" data-tab="software">💻 โปรแกรม</button>
         <button class="tab-btn" data-tab="shop">🛒 ร้านค้า</button>
       </nav>
+      <button class="admin-btn" id="adminNavBtn" title="เข้าสู่ระบบ Admin">⚙️</button>
       <button class="hamburger" id="hamburger" aria-label="เมนู">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main>
+  <main id="mainContent">
 
     <!-- ===== HOME TAB ===== -->
     <section class="tab-content active" id="tab-home">
-
-      <!-- Hero -->
       <div class="hero">
         <div class="hero-bg-circles">
           <div class="circle c1"></div>
@@ -51,13 +50,12 @@
             <span class="badge">✅ ปรึกษาฟรี</span>
           </div>
           <div class="hero-cta">
-            <a href="https://line.me" class="btn-primary">💬 ติดต่อเรา</a>
+            <a href="https://line.me" class="btn-primary" target="_blank">💬 ติดต่อเรา</a>
             <button class="btn-secondary" onclick="switchTab('shop')">🛒 ดูสินค้า</button>
           </div>
         </div>
       </div>
 
-      <!-- Case Study -->
       <div class="section-wrapper">
         <div class="section-label">📋 เคสล่าสุด</div>
         <div class="case-card">
@@ -70,37 +68,17 @@
         </div>
       </div>
 
-      <!-- Quick Services -->
       <div class="section-wrapper">
         <div class="section-label">⚡ บริการหลัก</div>
         <div class="quick-grid">
-          <div class="quick-card" onclick="switchTab('repair')">
-            <div class="qc-icon">🖥️</div>
-            <div>ซ่อมคอม / โน้ตบุ๊ก</div>
-          </div>
-          <div class="quick-card" onclick="switchTab('repair')">
-            <div class="qc-icon">🖨️</div>
-            <div>ซ่อม Printer</div>
-          </div>
-          <div class="quick-card" onclick="switchTab('network')">
-            <div class="qc-icon">📡</div>
-            <div>วาง Network</div>
-          </div>
-          <div class="quick-card" onclick="switchTab('software')">
-            <div class="qc-icon">⚙️</div>
-            <div>เขียนโปรแกรม</div>
-          </div>
-          <div class="quick-card" onclick="switchTab('repair')">
-            <div class="qc-icon">💾</div>
-            <div>อัปเกรด SSD</div>
-          </div>
-          <div class="quick-card">
-            <div class="qc-icon">🏠</div>
-            <div>ซ่อมถึงบ้าน</div>
-          </div>
+          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">🖥️</div><div>ซ่อมคอม / โน้ตบุ๊ก</div></div>
+          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">🖨️</div><div>ซ่อม Printer</div></div>
+          <div class="quick-card" onclick="switchTab('network')"><div class="qc-icon">📡</div><div>วาง Network</div></div>
+          <div class="quick-card" onclick="switchTab('software')"><div class="qc-icon">⚙️</div><div>เขียนโปรแกรม</div></div>
+          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">💾</div><div>อัปเกรด SSD</div></div>
+          <div class="quick-card"><div class="qc-icon">🏠</div><div>ซ่อมถึงบ้าน</div></div>
         </div>
       </div>
-
     </section>
 
     <!-- ===== REPAIR TAB ===== -->
@@ -111,47 +89,17 @@
       </div>
       <div class="section-wrapper">
         <div class="service-list">
-          <div class="svc-item">
-            <div class="svc-num">01</div>
-            <div class="svc-detail">
-              <h4>ซ่อมคอม / โน้ตบุ๊ก ทุกอาการ</h4>
-              <p>เปิดไม่ติด จอดับ ร้อนผิดปกติ บลูสกรีน จัดการได้ทุกเคส</p>
-            </div>
-          </div>
-          <div class="svc-item">
-            <div class="svc-num">02</div>
-            <div class="svc-detail">
-              <h4>ซ่อม Printer จบทุกปัญหา</h4>
-              <p>ดึงกระดาษไม่ขึ้น หมึกไม่ออก ตลับหมึกเสีย เปลี่ยนอะไหล่ทุกยี่ห้อ</p>
-            </div>
-          </div>
-          <div class="svc-item">
-            <div class="svc-num">03</div>
-            <div class="svc-detail">
-              <h4>เครื่องเปิดไม่ติด / ใช้งานไม่ได้</h4>
-              <p>วินิจฉัยตรงจุด แก้ได้จริง ทั้งฮาร์ดแวร์และซอฟต์แวร์</p>
-            </div>
-          </div>
-          <div class="svc-item">
-            <div class="svc-num">04</div>
-            <div class="svc-detail">
-              <h4>อัปเกรด SSD เพิ่มสปีดแรงทันใจ</h4>
-              <p>เปลี่ยน HDD → SSD บูตเร็วขึ้นหลายเท่า รับประกันการย้ายข้อมูล</p>
-            </div>
-          </div>
-          <div class="svc-item">
-            <div class="svc-num">05</div>
-            <div class="svc-detail">
-              <h4>บริการรับ-ส่งถึงหน้าบ้าน</h4>
-              <p>สะดวกสุด ๆ ไม่ต้องเสียเวลาเดินทาง ครอบคลุมพื้นที่ท่าฉลอม – สมุทรสาคร</p>
-            </div>
-          </div>
+          <div class="svc-item"><div class="svc-num">01</div><div class="svc-detail"><h4>ซ่อมคอม / โน้ตบุ๊ก ทุกอาการ</h4><p>เปิดไม่ติด จอดับ ร้อนผิดปกติ บลูสกรีน จัดการได้ทุกเคส</p></div></div>
+          <div class="svc-item"><div class="svc-num">02</div><div class="svc-detail"><h4>ซ่อม Printer จบทุกปัญหา</h4><p>ดึงกระดาษไม่ขึ้น หมึกไม่ออก ตลับหมึกเสีย เปลี่ยนอะไหล่ทุกยี่ห้อ</p></div></div>
+          <div class="svc-item"><div class="svc-num">03</div><div class="svc-detail"><h4>เครื่องเปิดไม่ติด / ใช้งานไม่ได้</h4><p>วินิจฉัยตรงจุด แก้ได้จริง ทั้งฮาร์ดแวร์และซอฟต์แวร์</p></div></div>
+          <div class="svc-item"><div class="svc-num">04</div><div class="svc-detail"><h4>อัปเกรด SSD เพิ่มสปีดแรงทันใจ</h4><p>เปลี่ยน HDD → SSD บูตเร็วขึ้นหลายเท่า รับประกันการย้ายข้อมูล</p></div></div>
+          <div class="svc-item"><div class="svc-num">05</div><div class="svc-detail"><h4>บริการรับ-ส่งถึงหน้าบ้าน</h4><p>สะดวกสุด ๆ ไม่ต้องเสียเวลาเดินทาง ครอบคลุมพื้นที่ท่าฉลอม – สมุทรสาคร</p></div></div>
         </div>
       </div>
       <div class="section-wrapper">
         <div class="free-check-banner">
           <span>✅ ตรวจเช็ก / ให้คำปรึกษาฟรี ก่อนตัดสินใจ</span>
-          <a href="https://line.me" class="btn-primary small">นัดวันนี้</a>
+          <a href="https://line.me" class="btn-primary small" target="_blank">นัดวันนี้</a>
         </div>
       </div>
     </section>
@@ -164,21 +112,9 @@
       </div>
       <div class="section-wrapper">
         <div class="net-cards">
-          <div class="net-card">
-            <div class="net-icon">🏗️</div>
-            <h4>วางระบบ Network / เดินสาย LAN</h4>
-            <p>ทั้งบ้านและร้าน ออกแบบโครงสร้างเน็ตเวิร์กให้เหมาะสม รองรับการขยายในอนาคต</p>
-          </div>
-          <div class="net-card">
-            <div class="net-icon">📶</div>
-            <h4>ติดตั้ง WiFi ให้แรง</h4>
-            <p>เลือกอุปกรณ์และจุดติดตั้งที่เหมาะสม ครอบคลุมทุกมุมบ้านหรือร้านค้า ไม่มีจุดอับสัญญาณ</p>
-          </div>
-          <div class="net-card">
-            <div class="net-icon">🛠️</div>
-            <h4>แก้ปัญหาเน็ตช้า / เน็ตหลุด</h4>
-            <p>วิเคราะห์ปัญหาตรงจุด ไม่ว่าจะเป็นอุปกรณ์ การตั้งค่า หรือสัญญาณรบกวน แก้ได้ครบ</p>
-          </div>
+          <div class="net-card"><div class="net-icon">🏗️</div><h4>วางระบบ Network / เดินสาย LAN</h4><p>ทั้งบ้านและร้าน ออกแบบโครงสร้างเน็ตเวิร์กให้เหมาะสม รองรับการขยายในอนาคต</p></div>
+          <div class="net-card"><div class="net-icon">📶</div><h4>ติดตั้ง WiFi ให้แรง</h4><p>เลือกอุปกรณ์และจุดติดตั้งที่เหมาะสม ครอบคลุมทุกมุมบ้านหรือร้านค้า ไม่มีจุดอับสัญญาณ</p></div>
+          <div class="net-card"><div class="net-icon">🛠️</div><h4>แก้ปัญหาเน็ตช้า / เน็ตหลุด</h4><p>วิเคราะห์ปัญหาตรงจุด ไม่ว่าจะเป็นอุปกรณ์ การตั้งค่า หรือสัญญาณรบกวน แก้ได้ครบ</p></div>
         </div>
       </div>
     </section>
@@ -191,25 +127,13 @@
       </div>
       <div class="section-wrapper">
         <div class="soft-grid">
-          <div class="soft-card">
-            <div class="soft-icon">📦</div>
-            <h4>ระบบสต๊อกสินค้า</h4>
-            <p>จัดการคลังสินค้า รับ-จ่าย สต็อก รายงานสรุป ใช้งานง่ายเหมาะทุกธุรกิจ</p>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">🗂️</div>
-            <h4>ระบบจัดการงาน / ระบบภายในองค์กร</h4>
-            <p>HR บันทึกเวลา ติดตามงาน อนุมัติเอกสาร ปรับแต่งตามโครงสร้างองค์กร</p>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">🌐</div>
-            <h4>Web Application</h4>
-            <p>ออกแบบและพัฒนาเว็บไซต์และแอปพลิเคชันตามความต้องการของธุรกิจ ครบจบที่เดียว</p>
-          </div>
+          <div class="soft-card"><div class="soft-icon">📦</div><h4>ระบบสต๊อกสินค้า</h4><p>จัดการคลังสินค้า รับ-จ่าย สต็อก รายงานสรุป ใช้งานง่ายเหมาะทุกธุรกิจ</p></div>
+          <div class="soft-card"><div class="soft-icon">🗂️</div><h4>ระบบจัดการงาน / ระบบภายในองค์กร</h4><p>HR บันทึกเวลา ติดตามงาน อนุมัติเอกสาร ปรับแต่งตามโครงสร้างองค์กร</p></div>
+          <div class="soft-card"><div class="soft-icon">🌐</div><h4>Web Application</h4><p>ออกแบบและพัฒนาเว็บไซต์และแอปพลิเคชันตามความต้องการของธุรกิจ ครบจบที่เดียว</p></div>
         </div>
-        <div class="free-check-banner" style="margin-top: 2rem;">
+        <div class="free-check-banner" style="margin-top:2rem">
           <span>💡 ปรึกษาความต้องการระบบฟรี ไม่มีข้อผูกมัด</span>
-          <a href="https://line.me" class="btn-primary small">ติดต่อเรา</a>
+          <a href="https://line.me" class="btn-primary small" target="_blank">ติดต่อเรา</a>
         </div>
       </div>
     </section>
@@ -220,8 +144,6 @@
         <h2>🛒 ร้านค้า – ท่าฉลอมคอมพิวเตอร์</h2>
         <p>จำหน่ายอุปกรณ์คอมพิวเตอร์คุณภาพดี ราคาเป็นกันเอง</p>
       </div>
-
-      <!-- Category Filter -->
       <div class="section-wrapper">
         <div class="cat-filter" id="catFilter">
           <button class="cat-btn active" data-cat="all">ทั้งหมด</button>
@@ -230,123 +152,8 @@
           <button class="cat-btn" data-cat="printer">🖨️ Printer</button>
           <button class="cat-btn" data-cat="accessories">🖱️ อุปกรณ์เสริม</button>
         </div>
-
         <div class="product-grid" id="productGrid">
-
-          <!-- Desktop -->
-          <div class="product-card" data-cat="desktop">
-            <div class="prod-badge">🖥️ Desktop</div>
-            <div class="prod-img desktop-img">🖥️</div>
-            <div class="prod-info">
-              <h4>PC Desktop Intel Core i5</h4>
-              <p>RAM 8GB / SSD 256GB / พร้อมใช้งาน</p>
-              <div class="prod-price">฿ 12,900</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="desktop">
-            <div class="prod-badge">🖥️ Desktop</div>
-            <div class="prod-img desktop-img">🖥️</div>
-            <div class="prod-info">
-              <h4>PC Desktop AMD Ryzen 5</h4>
-              <p>RAM 16GB / SSD 512GB / RTX 3050</p>
-              <div class="prod-price">฿ 22,500</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <!-- Notebook -->
-          <div class="product-card" data-cat="notebook">
-            <div class="prod-badge">💻 Notebook</div>
-            <div class="prod-img">💻</div>
-            <div class="prod-info">
-              <h4>Notebook Lenovo IdeaPad</h4>
-              <p>Core i5 / RAM 8GB / SSD 512GB / 15.6"</p>
-              <div class="prod-price">฿ 16,900</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="notebook">
-            <div class="prod-badge">💻 Notebook</div>
-            <div class="prod-img">💻</div>
-            <div class="prod-info">
-              <h4>Notebook Asus VivoBook</h4>
-              <p>Ryzen 5 / RAM 16GB / SSD 512GB / 14"</p>
-              <div class="prod-price">฿ 19,500</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <!-- Printer -->
-          <div class="product-card" data-cat="printer">
-            <div class="prod-badge">🖨️ Printer</div>
-            <div class="prod-img">🖨️</div>
-            <div class="prod-info">
-              <h4>Epson L3250 Wi-Fi</h4>
-              <p>พิมพ์ / สแกน / ถ่ายเอกสาร / หมึกแท้ Epson</p>
-              <div class="prod-price">฿ 5,490</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="printer">
-            <div class="prod-badge">🖨️ Printer</div>
-            <div class="prod-img">🖨️</div>
-            <div class="prod-info">
-              <h4>Canon PIXMA G2020</h4>
-              <p>พิมพ์ / สแกน / ถ่ายเอกสาร / Ink Tank</p>
-              <div class="prod-price">฿ 4,290</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <!-- Accessories -->
-          <div class="product-card" data-cat="accessories">
-            <div class="prod-badge">🖱️ Accessories</div>
-            <div class="prod-img">⌨️</div>
-            <div class="prod-info">
-              <h4>ชุดคีย์บอร์ด + เมาส์ Wireless</h4>
-              <p>ไร้สาย USB Nano Receiver ใช้ได้ทั้ง PC / Notebook</p>
-              <div class="prod-price">฿ 490</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="accessories">
-            <div class="prod-badge">🖱️ Accessories</div>
-            <div class="prod-img">💾</div>
-            <div class="prod-info">
-              <h4>SSD 256GB / 512GB / 1TB</h4>
-              <p>ยี่ห้อดัง Kingston / WD / Samsung พร้อมบริการติดตั้ง</p>
-              <div class="prod-price">฿ 790 ขึ้นไป</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="accessories">
-            <div class="prod-badge">🖱️ Accessories</div>
-            <div class="prod-img">🖥️</div>
-            <div class="prod-info">
-              <h4>Monitor 24" Full HD</h4>
-              <p>IPS Panel 75Hz HDMI/VGA รับประกัน 3 ปี</p>
-              <div class="prod-price">฿ 3,990</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
-          <div class="product-card" data-cat="accessories">
-            <div class="prod-badge">🖱️ Accessories</div>
-            <div class="prod-img">📡</div>
-            <div class="prod-info">
-              <h4>Router WiFi 6 / Mesh</h4>
-              <p>ครอบคลุมกว้าง เหมาะบ้านและสำนักงาน หลายยี่ห้อ</p>
-              <div class="prod-price">฿ 1,290 ขึ้นไป</div>
-              <button class="btn-cart">🛒 สอบถาม</button>
-            </div>
-          </div>
-
+          <!-- Rendered by JS from localStorage -->
         </div>
       </div>
     </section>
@@ -374,6 +181,178 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== ADMIN LOGIN MODAL ===== -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <img src="logo.jpg" alt="Logo" class="modal-logo" />
+        <h3>เข้าสู่ระบบ Admin</h3>
+        <p>ท่าฉลอมคอมพิวเตอร์</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>ชื่อผู้ใช้</label>
+          <input type="text" id="loginUser" placeholder="admin" autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label>รหัสผ่าน</label>
+          <div class="pw-wrap">
+            <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" />
+            <button class="pw-toggle" onclick="togglePw('loginPass', this)">👁️</button>
+          </div>
+        </div>
+        <div class="form-error" id="loginError"></div>
+        <button class="btn-primary full" onclick="doLogin()">เข้าสู่ระบบ</button>
+        <button class="btn-ghost full" onclick="closeModal('loginModal')">ยกเลิก</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ADMIN PANEL ===== -->
+  <div class="modal-overlay" id="adminPanel">
+    <div class="modal-box wide">
+      <div class="admin-header">
+        <div class="admin-title">
+          <span class="admin-badge">⚙️ Admin Panel</span>
+          <h3>จัดการสินค้า</h3>
+        </div>
+        <div class="admin-header-actions">
+          <button class="btn-primary small" onclick="openProductForm()">+ เพิ่มสินค้าใหม่</button>
+          <button class="btn-danger small" onclick="doLogout()">ออกจากระบบ</button>
+          <button class="modal-close" onclick="closeModal('adminPanel')">✕</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="admin-stats" id="adminStats"></div>
+
+      <!-- Product Table -->
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="adminTable">
+          <thead>
+            <tr>
+              <th>ไอคอน</th>
+              <th>ชื่อสินค้า</th>
+              <th>หมวดหมู่</th>
+              <th>รายละเอียด</th>
+              <th>ราคา</th>
+              <th>สถานะ</th>
+              <th>จัดการ</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Change Password -->
+      <div class="pw-section">
+        <h4>🔑 เปลี่ยนรหัสผ่าน Admin</h4>
+        <div class="pw-change-row">
+          <div class="pw-wrap">
+            <input type="password" id="newPw1" placeholder="รหัสผ่านใหม่" />
+            <button class="pw-toggle" onclick="togglePw('newPw1', this)">👁️</button>
+          </div>
+          <div class="pw-wrap">
+            <input type="password" id="newPw2" placeholder="ยืนยันรหัสผ่านใหม่" />
+            <button class="pw-toggle" onclick="togglePw('newPw2', this)">👁️</button>
+          </div>
+          <button class="btn-primary small" onclick="changePassword()">บันทึก</button>
+        </div>
+        <div class="form-error" id="pwError"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCT FORM MODAL ===== -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="productFormTitle">เพิ่มสินค้าใหม่</h3>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="productId" />
+        <div class="form-row">
+          <div class="form-group">
+            <label>ไอคอน (Emoji)</label>
+            <div class="emoji-row">
+              <input type="text" id="productIcon" placeholder="🖥️" maxlength="4" />
+              <div class="emoji-presets">
+                <span onclick="setEmoji('🖥️')">🖥️</span>
+                <span onclick="setEmoji('💻')">💻</span>
+                <span onclick="setEmoji('🖨️')">🖨️</span>
+                <span onclick="setEmoji('🖱️')">🖱️</span>
+                <span onclick="setEmoji('⌨️')">⌨️</span>
+                <span onclick="setEmoji('💾')">💾</span>
+                <span onclick="setEmoji('📡')">📡</span>
+                <span onclick="setEmoji('🔌')">🔌</span>
+                <span onclick="setEmoji('📷')">📷</span>
+                <span onclick="setEmoji('🎧')">🎧</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>หมวดหมู่</label>
+            <select id="productCat">
+              <option value="desktop">🖥️ PC Desktop</option>
+              <option value="notebook">💻 Notebook</option>
+              <option value="printer">🖨️ Printer</option>
+              <option value="accessories">🖱️ อุปกรณ์เสริม</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>ชื่อสินค้า</label>
+          <input type="text" id="productName" placeholder="เช่น Epson L3250 Wi-Fi" />
+        </div>
+        <div class="form-group">
+          <label>รายละเอียด</label>
+          <input type="text" id="productDesc" placeholder="เช่น พิมพ์ / สแกน / ถ่ายเอกสาร" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>ราคา (บาท)</label>
+            <input type="number" id="productPrice" placeholder="0" min="0" />
+          </div>
+          <div class="form-group">
+            <label>ป้ายราคา (ถ้าไม่ระบุใช้ตัวเลขอัตโนมัติ)</label>
+            <input type="text" id="productPriceLabel" placeholder="เช่น ฿ 790 ขึ้นไป" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>สถานะ</label>
+          <select id="productStatus">
+            <option value="available">✅ มีสินค้า</option>
+            <option value="preorder">🕐 สั่งจองได้</option>
+            <option value="sold">❌ สินค้าหมด</option>
+          </select>
+        </div>
+        <div class="form-error" id="productError"></div>
+        <div class="modal-actions">
+          <button class="btn-primary full" onclick="saveProduct()">💾 บันทึกสินค้า</button>
+          <button class="btn-ghost full" onclick="closeModal('productModal')">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DELETE CONFIRM MODAL ===== -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal-box small">
+      <div class="modal-body" style="text-align:center;padding:2rem">
+        <div style="font-size:3rem;margin-bottom:1rem">🗑️</div>
+        <h3 style="margin-bottom:.5rem">ลบสินค้า?</h3>
+        <p id="deleteProductName" style="color:var(--text-muted);margin-bottom:1.5rem"></p>
+        <div style="display:flex;gap:.75rem">
+          <button class="btn-danger full" onclick="confirmDelete()">ลบเลย</button>
+          <button class="btn-ghost full" onclick="closeModal('deleteModal')">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toastContainer"></div>
 
   <script src="script.js"></script>
 </body>
