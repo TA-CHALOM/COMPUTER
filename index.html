@@ -36,7 +36,7 @@
         <a href="#area"      class="nav-link">📍 พื้นที่</a>
         <a href="#contact"   class="nav-link">📞 ติดต่อ</a>
       </nav>
-      <a href="https://line.me/ti/p/@993fnltu" class="btn-line-nav" target="_blank" rel="noopener">💬 LINE</a>
+      <a id="nav-line-btn" href="https://line.me/ti/p/@993fnltu" class="btn-line-nav" target="_blank" rel="noopener">💬 LINE</a>
       <button class="hamburger" id="hamburger" aria-label="เปิดเมนู" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -68,8 +68,8 @@
         <div class="check-item"><span class="check-dot"></span>แจ้งราคาก่อนซ่อม</div>
       </div>
       <div class="hero-cta">
-        <a href="https://line.me/ti/p/@993fnltu" class="btn-primary" target="_blank" rel="noopener">🟢 ติดต่อผ่าน LINE</a>
-        <a href="https://www.facebook.com/adminsupport2021" class="btn-outline" target="_blank" rel="noopener">📘 Facebook</a>
+        <a id="hero-line-btn" href="https://line.me/ti/p/@993fnltu" class="btn-primary" target="_blank" rel="noopener">🟢 ติดต่อผ่าน LINE</a>
+        <a id="hero-fb-btn" href="https://www.facebook.com/adminsupport2021" class="btn-outline" target="_blank" rel="noopener">📘 Facebook</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
@@ -99,73 +99,8 @@
         <h2>บริการซ่อมและดูแลระบบ IT</h2>
         <p class="section-desc">ครอบคลุมทุกปัญหาคอมพิวเตอร์ ทั้งบ้านและสำนักงาน</p>
       </div>
-      <div class="services-grid">
-        <div class="svc-card" data-aos>
-          <div class="svc-icon-wrap svc-blue">💻</div>
-          <h3>ซ่อมคอมพิวเตอร์ PC</h3>
-          <ul class="svc-list">
-            <li>เครื่องช้า / ค้าง / เด้ง</li>
-            <li>ติดไวรัส / มัลแวร์</li>
-            <li>ลง Windows / โปรแกรม</li>
-            <li>เปลี่ยนอะไหล่ทุกชนิด</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
-        </div>
-        <div class="svc-card" data-aos>
-          <div class="svc-icon-wrap svc-purple">💻</div>
-          <h3>ซ่อมโน้ตบุ๊ก</h3>
-          <ul class="svc-list">
-            <li>เปิดไม่ติด / ค้างบ่อย</li>
-            <li>จอดับ / เปลี่ยนจอ</li>
-            <li>เปลี่ยนแบตเตอรี่</li>
-            <li>คีย์บอร์ดเสีย / หน้าจอแตก</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
-        </div>
-        <div class="svc-card" data-aos>
-          <div class="svc-icon-wrap svc-orange">🖨️</div>
-          <h3>ซ่อม Printer</h3>
-          <ul class="svc-list">
-            <li>พิมพ์ไม่ออก / หมึกไม่เข้า</li>
-            <li>กระดาษติด</li>
-            <li>ตั้งค่าพรินเตอร์เครือข่าย</li>
-            <li>เปลี่ยน head / ล้างหัวพิมพ์</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
-        </div>
-        <div class="svc-card" data-aos>
-          <div class="svc-icon-wrap svc-yellow">⚡</div>
-          <h3>อัปเกรด SSD / RAM</h3>
-          <ul class="svc-list">
-            <li>เพิ่มความเร็วเครื่องทันใจ</li>
-            <li>ย้ายข้อมูลทุกไฟล์ ไม่หาย</li>
-            <li>ติดตั้ง Windows ใหม่</li>
-            <li>เพิ่ม RAM รองรับงานหนัก</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
-        </div>
-        <div class="svc-card" data-aos>
-          <div class="svc-icon-wrap svc-teal">🌐</div>
-          <h3>ติดตั้งระบบ Network</h3>
-          <ul class="svc-list">
-            <li>Router / WiFi ให้แรง ไม่มีจุดอับ</li>
-            <li>เดินสาย LAN สำนักงาน</li>
-            <li>แชร์ Printer เครือข่าย</li>
-            <li>แก้ปัญหาเน็ตช้า / หลุด</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
-        </div>
-        <div class="svc-card svc-card--highlight" data-aos>
-          <div class="svc-icon-wrap svc-navy">🏢</div>
-          <h3>ดูแล IT สำหรับบริษัท</h3>
-          <ul class="svc-list">
-            <li>MA รายเดือน ราคาพิเศษ</li>
-            <li>Remote Support ทันที</li>
-            <li>ตรวจสอบและบำรุงระบบ</li>
-            <li>ให้คำปรึกษาด้าน IT ฟรี</li>
-          </ul>
-          <a href="https://line.me/ti/p/@993fnltu" class="svc-link" target="_blank" rel="noopener">ปรึกษาแพ็กเกจ →</a>
-        </div>
+      <div class="services-grid" id="services-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -178,13 +113,8 @@
         <h2>ทำไมต้องเลือกเรา?</h2>
         <p class="section-desc section-desc--light">ประสบการณ์ด้าน IT โดยตรง บริการจริงใจ ไม่มีค่าใช้จ่ายซ่อน</p>
       </div>
-      <div class="why-grid">
-        <div class="why-card" data-aos><div class="why-icon">🚗</div><h3>ซ่อมถึงบ้าน</h3><p>ไม่ต้องยกเครื่องไปไหน ช่างเข้าบริการถึงที่ สะดวกสุด ๆ</p></div>
-        <div class="why-card" data-aos><div class="why-icon">💰</div><h3>แจ้งราคาก่อนซ่อม</h3><p>บอกราคาให้ทราบก่อนทุกครั้ง ไม่มีค่าใช้จ่ายแอบแฝง</p></div>
-        <div class="why-card" data-aos><div class="why-icon">🛡️</div><h3>รับประกันงานซ่อม</h3><p>มีการรับประกันหลังซ่อมทุกชิ้นงาน อุ่นใจหลังใช้บริการ</p></div>
-        <div class="why-card" data-aos><div class="why-icon">⚡</div><h3>ตรวจเช็กฟรี</h3><p>วินิจฉัยอาการเบื้องต้นฟรี ก่อนตัดสินใจซ่อมทุกครั้ง</p></div>
-        <div class="why-card" data-aos><div class="why-icon">🔄</div><h3>รับ-ส่งเครื่อง</h3><p>บริการรับส่งเครื่องถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอมและใกล้เคียง</p></div>
-        <div class="why-card" data-aos><div class="why-icon">🏢</div><h3>ดูแลทั้งบ้านและออฟฟิศ</h3><p>รองรับทั้งลูกค้าทั่วไปและองค์กร มีแพ็กเกจ MA รายเดือน</p></div>
+      <div class="why-grid" id="why-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -219,13 +149,8 @@
         <h2>ผลงานที่ผ่านมา</h2>
         <p class="section-desc">ตัวอย่างงานที่เราเคยทำ ช่วยสร้างความมั่นใจในคุณภาพ</p>
       </div>
-      <div class="portfolio-grid">
-        <div class="port-card" data-aos><div class="port-img port-img--ssd"><span class="port-emoji">💾</span></div><div class="port-info"><h4>เปลี่ยน HDD → SSD</h4><p>บูตเร็วขึ้น 5 เท่า ย้ายข้อมูลไม่หาย</p><span class="port-tag">อัปเกรด</span></div></div>
-        <div class="port-card" data-aos><div class="port-img port-img--nb"><span class="port-emoji">💻</span></div><div class="port-info"><h4>ซ่อมโน้ตบุ๊ก จอดับ</h4><p>เปลี่ยนจอใหม่ รับประกัน 3 เดือน</p><span class="port-tag">งานซ่อม</span></div></div>
-        <div class="port-card" data-aos><div class="port-img port-img--printer"><span class="port-emoji">🖨️</span></div><div class="port-info"><h4>ซ่อม Printer Epson</h4><p>ล้างหัวพิมพ์ ตั้งค่าใหม่ พิมพ์คมชัด</p><span class="port-tag">งานซ่อม</span></div></div>
-        <div class="port-card" data-aos><div class="port-img port-img--network"><span class="port-emoji">🌐</span></div><div class="port-info"><h4>วาง Network สำนักงาน</h4><p>เดินสาย LAN 20 จุด WiFi ไร้จุดอับ</p><span class="port-tag">Network</span></div></div>
-        <div class="port-card" data-aos><div class="port-img port-img--virus"><span class="port-emoji">🛡️</span></div><div class="port-info"><h4>กำจัดไวรัส / มัลแวร์</h4><p>ลง Windows ใหม่ เครื่องกลับมาเร็ว</p><span class="port-tag">ซอฟต์แวร์</span></div></div>
-        <div class="port-card" data-aos><div class="port-img port-img--ma"><span class="port-emoji">🏢</span></div><div class="port-info"><h4>MA รายเดือน บริษัท</h4><p>ดูแลระบบ IT 15 เครื่อง Remote Support</p><span class="port-tag">IT Support</span></div></div>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -238,13 +163,8 @@
         <h2>รีวิวจากลูกค้าจริง</h2>
         <p class="section-desc">ความคิดเห็นจากผู้ใช้บริการจริง ไม่มีการปั้นรีวิว</p>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"เครื่องเร็วขึ้นมากหลังเปลี่ยน SSD ซ่อมถึงบ้าน ไม่ต้องยกไปไหน สะดวกมาก"</blockquote><div class="review-author"><div class="review-avatar">ส</div><div><strong>คุณสมชาย</strong><span>ลูกค้า PC Desktop</span></div></div></div>
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"โน้ตบุ๊กจอดับ ช่างมาซ่อมถึงบ้าน เปลี่ยนจอเสร็จภายในวันเดียว ราคาตามที่บอกไว้เป๊ะ"</blockquote><div class="review-author"><div class="review-avatar">ว</div><div><strong>คุณวิภา</strong><span>ลูกค้า Notebook</span></div></div></div>
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"Printer ใช้งานได้ปกติแล้ว ตั้งค่าเครือข่ายให้ด้วย พิมพ์จากมือถือได้เลย ประทับใจมาก"</blockquote><div class="review-author"><div class="review-avatar">น</div><div><strong>คุณนิตยา</strong><span>ลูกค้า Printer</span></div></div></div>
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"ทำ MA รายเดือนให้บริษัท ดูแลดี Remote Support ไว ปัญหา IT แทบไม่มีแล้ว"</blockquote><div class="review-author"><div class="review-avatar">ป</div><div><strong>คุณประพัทธ์</strong><span>ลูกค้า IT Support</span></div></div></div>
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"วาง Network บ้านใหม่ WiFi แรงทุกห้อง ช่างแนะนำอุปกรณ์ที่คุ้มค่า ไม่ขายของเกิน"</blockquote><div class="review-author"><div class="review-avatar">ม</div><div><strong>คุณมานะ</strong><span>ลูกค้า Network</span></div></div></div>
-        <div class="review-card" data-aos><div class="review-stars">⭐⭐⭐⭐⭐</div><blockquote>"เครื่องติดไวรัสหนักมาก ช่างจัดการได้เรียบร้อย ลง Windows ใหม่ เร็วเหมือนเครื่องใหม่เลย"</blockquote><div class="review-author"><div class="review-avatar">ก</div><div><strong>คุณกิตติ</strong><span>ลูกค้า PC Desktop</span></div></div></div>
+      <div class="reviews-grid" id="reviews-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -258,14 +178,8 @@
         <p class="section-desc">ครอบคลุมพื้นที่สมุทรสาคร และบริเวณใกล้เคียง</p>
       </div>
       <div class="area-map-wrap">
-        <div class="area-pills">
-          <div class="area-pill active"><span>🗺️</span> ท่าฉลอม</div>
-          <div class="area-pill"><span>🗺️</span> มหาชัย</div>
-          <div class="area-pill"><span>🗺️</span> พันท้ายนรสิงห์</div>
-          <div class="area-pill"><span>🗺️</span> บางน้ำจืด</div>
-          <div class="area-pill"><span>🗺️</span> โคกขาม</div>
-          <div class="area-pill"><span>🗺️</span> สมุทรสาคร</div>
-          <div class="area-pill area-pill--more">+ พื้นที่ใกล้เคียง</div>
+        <div class="area-pills" id="area-pills">
+          <!-- Rendered by JS -->
         </div>
         <div class="area-note">
           <span class="note-icon">ℹ️</span>
@@ -288,12 +202,8 @@
         <h2>คำถามที่พบบ่อย</h2>
         <p class="section-desc">ข้อสงสัยที่ลูกค้าถามบ่อย ตอบให้ครบ</p>
       </div>
-      <div class="faq-list">
-        <div class="faq-item" data-aos><button class="faq-q" aria-expanded="false"><span>ซ่อมถึงบ้านคิดค่าเดินทางไหม?</span><span class="faq-arrow">+</span></button><div class="faq-a" hidden>ฟรีในพื้นที่ท่าฉลอม – สมุทรสาคร และบริเวณใกล้เคียง สำหรับพื้นที่ไกลออกไปอาจมีค่าเดินทางเพิ่มเล็กน้อย แต่จะแจ้งให้ทราบก่อนทุกครั้ง</div></div>
-        <div class="faq-item" data-aos><button class="faq-q" aria-expanded="false"><span>ใช้เวลาซ่อมนานแค่ไหน?</span><span class="faq-arrow">+</span></button><div class="faq-a" hidden>ขึ้นอยู่กับประเภทงาน งานทั่วไปอย่างลง Windows หรือกำจัดไวรัสใช้เวลา 1–3 ชั่วโมง งานเปลี่ยนอะไหล่อาจใช้เวลา 1–2 วัน (รอชิ้นส่วน) จะแจ้งระยะเวลาก่อนเริ่มงานทุกครั้ง</div></div>
-        <div class="faq-item" data-aos><button class="faq-q" aria-expanded="false"><span>รับประกันงานซ่อมหรือไม่?</span><span class="faq-arrow">+</span></button><div class="faq-a" hidden>รับประกันงานซ่อมทุกชิ้นงาน ระยะเวลารับประกันขึ้นอยู่กับประเภทงาน เช่น งานซอฟต์แวร์รับประกัน 30 วัน งานเปลี่ยนอะไหล่รับประกัน 90 วัน จะแจ้งเงื่อนไขให้ทราบก่อนทุกครั้ง</div></div>
-        <div class="faq-item" data-aos><button class="faq-q" aria-expanded="false"><span>รับซ่อมวันหยุดหรือนอกเวลาได้ไหม?</span><span class="faq-arrow">+</span></button><div class="faq-a" hidden>รับบริการตามนัดหมาย รวมถึงวันหยุดและนอกเวลาทำการ ขึ้นอยู่กับตารางนัดหมาย ทักมาสอบถามล่วงหน้าได้เลยครับ</div></div>
-        <div class="faq-item" data-aos><button class="faq-q" aria-expanded="false"><span>ถ้าซ่อมไม่ได้จะคิดเงินไหม?</span><span class="faq-arrow">+</span></button><div class="faq-a" hidden>ไม่คิดค่าตรวจเช็กเบื้องต้น หากซ่อมไม่ได้หรือซ่อมแล้วไม่คุ้ม จะแจ้งให้ทราบพร้อมเสนอทางเลือกอื่น โดยไม่คิดค่าบริการตรวจ</div></div>
+      <div class="faq-list" id="faq-list">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -306,31 +216,8 @@
         <h2>พร้อมให้บริการทุกวัน</h2>
         <p class="section-desc section-desc--light">ติดต่อได้หลายช่องทาง สะดวกแบบไหนก็ได้</p>
       </div>
-      <div class="contact-grid">
-        <a href="https://line.me/ti/p/@993fnltu" class="contact-card contact-card--line" target="_blank" rel="noopener">
-          <div class="contact-icon">💬</div>
-          <h3>LINE Official</h3>
-          <p>@993fnltu</p>
-          <span class="contact-action">เปิด LINE →</span>
-        </a>
-        <a href="https://www.facebook.com/adminsupport2021" class="contact-card contact-card--fb" target="_blank" rel="noopener">
-          <div class="contact-icon">📘</div>
-          <h3>Facebook Page</h3>
-          <p>TA-CHALOM COMPUTER</p>
-          <span class="contact-action">ดูเพจ →</span>
-        </a>
-        <a href="tel:0800000000" class="contact-card contact-card--tel">
-          <div class="contact-icon">📞</div>
-          <h3>โทรศัพท์</h3>
-          <p>080-000-0000</p>
-          <span class="contact-action">โทรเลย →</span>
-        </a>
-        <div class="contact-card contact-card--hours">
-          <div class="contact-icon">🕒</div>
-          <h3>เวลาทำการ</h3>
-          <p>จันทร์ – เสาร์<br>09:00 – 18:00 น.</p>
-          <span class="contact-action contact-action--muted">นัดล่วงหน้าได้ทุกวัน</span>
-        </div>
+      <div class="contact-grid" id="contact-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
@@ -364,10 +251,10 @@
         </div>
         <div class="footer-contact-col">
           <h5>ติดต่อ</h5>
-          <p>💬 LINE: @993fnltu</p>
-          <p>📘 <a href="https://www.facebook.com/adminsupport2021" target="_blank" rel="noopener" style="color:var(--gray-400);">Facebook Page</a></p>
-          <p>📍 ท่าฉลอม สมุทรสาคร</p>
-          <p>🕒 จ-ส 09:00–18:00</p>
+          <p id="footer-line">💬 LINE: @993fnltu</p>
+          <p><span id="footer-fb">📘 <a href="https://www.facebook.com/adminsupport2021" target="_blank" rel="noopener" style="color:var(--gray-400);">Facebook Page</a></span></p>
+          <p id="footer-address">📍 ท่าฉลอม สมุทรสาคร</p>
+          <p id="footer-hours">🕒 จ-ส 09:00–18:00</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -378,11 +265,248 @@
   </footer>
 
   <!-- ===== FLOAT LINE BUTTON ===== -->
-  <a href="https://line.me/ti/p/@993fnltu" class="float-line" target="_blank" rel="noopener" aria-label="ติดต่อผ่าน LINE">💬</a>
+  <a id="float-line-btn" href="https://line.me/ti/p/@993fnltu" class="float-line" target="_blank" rel="noopener" aria-label="ติดต่อผ่าน LINE">💬</a>
 
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-to-top" id="backToTop" aria-label="กลับขึ้นข้างบน">↑</button>
 
   <script src="script.js"></script>
+  <script>
+  /* ============================================================
+     INDEX.JS — ดึงข้อมูลจาก localStorage (แก้โดย Admin)
+     ============================================================ */
+  (function () {
+    'use strict';
+
+    const STORAGE_KEY = 'tc_admin_data';
+
+    /* ── Default Data (ใช้เมื่อ Admin ยังไม่เคยบันทึก) ── */
+    const defaultData = {
+      contact: {
+        line: '@993fnltu',
+        fb: 'https://www.facebook.com/adminsupport2021',
+        phone: '080-000-0000',
+        address: 'ท่าฉลอม สมุทรสาคร',
+        hours: 'จ-ส 09:00–18:00',
+        note: 'นัดล่วงหน้าได้ทุกวัน'
+      },
+      services: [
+        { id:1, name:'ซ่อมคอมพิวเตอร์ PC', icon:'💻', color:'svc-blue', items:'เครื่องช้า / ค้าง / เด้ง,ติดไวรัส / มัลแวร์,ลง Windows / โปรแกรม,เปลี่ยนอะไหล่ทุกชนิด' },
+        { id:2, name:'ซ่อมโน้ตบุ๊ก', icon:'💻', color:'svc-purple', items:'เปิดไม่ติด / ค้างบ่อย,จอดับ / เปลี่ยนจอ,เปลี่ยนแบตเตอรี่,คีย์บอร์ดเสีย / หน้าจอแตก' },
+        { id:3, name:'ซ่อม Printer', icon:'🖨️', color:'svc-orange', items:'พิมพ์ไม่ออก / หมึกไม่เข้า,กระดาษติด,ตั้งค่าพรินเตอร์เครือข่าย,เปลี่ยน head / ล้างหัวพิมพ์' },
+        { id:4, name:'อัปเกรด SSD / RAM', icon:'⚡', color:'svc-yellow', items:'เพิ่มความเร็วเครื่องทันใจ,ย้ายข้อมูลทุกไฟล์ ไม่หาย,ติดตั้ง Windows ใหม่,เพิ่ม RAM รองรับงานหนัก' },
+        { id:5, name:'ติดตั้งระบบ Network', icon:'🌐', color:'svc-teal', items:'Router / WiFi ให้แรง ไม่มีจุดอับ,เดินสาย LAN สำนักงาน,แชร์ Printer เครือข่าย,แก้ปัญหาเน็ตช้า / หลุด' },
+        { id:6, name:'ดูแล IT สำหรับบริษัท', icon:'🏢', color:'svc-navy', items:'MA รายเดือน ราคาพิเศษ,Remote Support ทันที,ตรวจสอบและบำรุงระบบ,ให้คำปรึกษาด้าน IT ฟรี' }
+      ],
+      why: [
+        { id:1, name:'ซ่อมถึงบ้าน', icon:'🚗', desc:'ไม่ต้องยกเครื่องไปไหน ช่างเข้าบริการถึงที่ สะดวกสุด ๆ' },
+        { id:2, name:'แจ้งราคาก่อนซ่อม', icon:'💰', desc:'บอกราคาให้ทราบก่อนทุกครั้ง ไม่มีค่าใช้จ่ายแอบแฝง' },
+        { id:3, name:'รับประกันงานซ่อม', icon:'🛡️', desc:'มีการรับประกันหลังซ่อมทุกชิ้นงาน อุ่นใจหลังใช้บริการ' },
+        { id:4, name:'ตรวจเช็กฟรี', icon:'⚡', desc:'วินิจฉัยอาการเบื้องต้นฟรี ก่อนตัดสินใจซ่อมทุกครั้ง' },
+        { id:5, name:'รับ-ส่งเครื่อง', icon:'🔄', desc:'บริการรับส่งเครื่องถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอมและใกล้เคียง' },
+        { id:6, name:'ดูแลทั้งบ้านและออฟฟิศ', icon:'🏢', desc:'รองรับทั้งลูกค้าทั่วไปและองค์กร มีแพ็กเกจ MA รายเดือน' }
+      ],
+      portfolio: [
+        { id:1, title:'เปลี่ยน HDD → SSD', desc:'บูตเร็วขึ้น 5 เท่า ย้ายข้อมูลไม่หาย', tag:'อัปเกรด', icon:'💾' },
+        { id:2, title:'ซ่อมโน้ตบุ๊ก จอดับ', desc:'เปลี่ยนจอใหม่ รับประกัน 3 เดือน', tag:'งานซ่อม', icon:'💻' },
+        { id:3, title:'ซ่อม Printer Epson', desc:'ล้างหัวพิมพ์ ตั้งค่าใหม่ พิมพ์คมชัด', tag:'งานซ่อม', icon:'🖨️' },
+        { id:4, title:'วาง Network สำนักงาน', desc:'เดินสาย LAN 20 จุด WiFi ไร้จุดอับ', tag:'Network', icon:'🌐' },
+        { id:5, title:'กำจัดไวรัส / มัลแวร์', desc:'ลง Windows ใหม่ เครื่องกลับมาเร็ว', tag:'ซอฟต์แวร์', icon:'🛡️' },
+        { id:6, title:'MA รายเดือน บริษัท', desc:'ดูแลระบบ IT 15 เครื่อง Remote Support', tag:'IT Support', icon:'🏢' }
+      ],
+      reviews: [
+        { id:1, name:'คุณสมชาย', type:'ลูกค้า PC Desktop', stars:5, text:'เครื่องเร็วขึ้นมากหลังเปลี่ยน SSD ซ่อมถึงบ้าน ไม่ต้องยกไปไหน สะดวกมาก' },
+        { id:2, name:'คุณวิภา', type:'ลูกค้า Notebook', stars:5, text:'โน้ตบุ๊กจอดับ ช่างมาซ่อมถึงบ้าน เปลี่ยนจอเสร็จภายในวันเดียว ราคาตามที่บอกไว้เป๊ะ' },
+        { id:3, name:'คุณนิตยา', type:'ลูกค้า Printer', stars:5, text:'Printer ใช้งานได้ปกติแล้ว ตั้งค่าเครือข่ายให้ด้วย พิมพ์จากมือถือได้เลย ประทับใจมาก' },
+        { id:4, name:'คุณประพัทธ์', type:'ลูกค้า IT Support', stars:5, text:'ทำ MA รายเดือนให้บริษัท ดูแลดี Remote Support ไว ปัญหา IT แทบไม่มีแล้ว' },
+        { id:5, name:'คุณมานะ', type:'ลูกค้า Network', stars:5, text:'วาง Network บ้านใหม่ WiFi แรงทุกห้อง ช่างแนะนำอุปกรณ์ที่คุ้มค่า ไม่ขายของเกิน' },
+        { id:6, name:'คุณกิตติ', type:'ลูกค้า PC Desktop', stars:5, text:'เครื่องติดไวรัสหนักมาก ช่างจัดการได้เรียบร้อย ลง Windows ใหม่ เร็วเหมือนเครื่องใหม่เลย' }
+      ],
+      faq: [
+        { id:1, q:'ซ่อมถึงบ้านคิดค่าเดินทางไหม?', a:'ฟรีในพื้นที่ท่าฉลอม – สมุทรสาคร และบริเวณใกล้เคียง สำหรับพื้นที่ไกลออกไปอาจมีค่าเดินทางเพิ่มเล็กน้อย แต่จะแจ้งให้ทราบก่อนทุกครั้ง' },
+        { id:2, q:'ใช้เวลาซ่อมนานแค่ไหน?', a:'ขึ้นอยู่กับประเภทงาน งานทั่วไปอย่างลง Windows หรือกำจัดไวรัสใช้เวลา 1–3 ชั่วโมง งานเปลี่ยนอะไหล่อาจใช้เวลา 1–2 วัน (รอชิ้นส่วน) จะแจ้งระยะเวลาก่อนเริ่มงานทุกครั้ง' },
+        { id:3, q:'รับประกันงานซ่อมหรือไม่?', a:'รับประกันงานซ่อมทุกชิ้นงาน ระยะเวลารับประกันขึ้นอยู่กับประเภทงาน เช่น งานซอฟต์แวร์รับประกัน 30 วัน งานเปลี่ยนอะไหล่รับประกัน 90 วัน จะแจ้งเงื่อนไขให้ทราบก่อนทุกครั้ง' },
+        { id:4, q:'รับซ่อมวันหยุดหรือนอกเวลาได้ไหม?', a:'รับบริการตามนัดหมาย รวมถึงวันหยุดและนอกเวลาทำการ ขึ้นอยู่กับตารางนัดหมาย ทักมาสอบถามล่วงหน้าได้เลยครับ' },
+        { id:5, q:'ถ้าซ่อมไม่ได้จะคิดเงินไหม?', a:'ไม่คิดค่าตรวจเช็กเบื้องต้น หากซ่อมไม่ได้หรือซ่อมแล้วไม่คุ้ม จะแจ้งให้ทราบพร้อมเสนอทางเลือกอื่น โดยไม่คิดค่าบริการตรวจ' }
+      ],
+      area: [
+        { id:1, name:'ท่าฉลอม', type:'หลัก' },
+        { id:2, name:'มหาชัย', type:'หลัก' },
+        { id:3, name:'พันท้ายนรสิงห์', type:'หลัก' },
+        { id:4, name:'บางน้ำจืด', type:'ใกล้เคียง' },
+        { id:5, name:'โคกขาม', type:'ใกล้เคียง' },
+        { id:6, name:'สมุทรสาคร', type:'หลัก' }
+      ]
+    };
+
+    /* ── โหลดข้อมูลจาก localStorage ── */
+    function loadDB() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(defaultData));
+      } catch (e) {
+        return JSON.parse(JSON.stringify(defaultData));
+      }
+    }
+
+    const DB = loadDB();
+    const C = DB.contact || defaultData.contact;
+
+    /* ── อัปเดต LINE / FB links ── */
+    function lineHref(id) {
+      const href = C.line ? (C.line.startsWith('http') ? C.line : 'https://line.me/ti/p/' + C.line) : '#';
+      const el = document.getElementById(id);
+      if (el) el.href = href;
+    }
+    lineHref('nav-line-btn');
+    lineHref('hero-line-btn');
+    lineHref('float-line-btn');
+
+    const fbEl = document.getElementById('hero-fb-btn');
+    if (fbEl && C.fb) fbEl.href = C.fb;
+
+    /* ── Footer ── */
+    const fl = document.getElementById('footer-line');
+    if (fl) fl.textContent = '💬 LINE: ' + (C.line || '@993fnltu');
+
+    const fa = document.getElementById('footer-address');
+    if (fa) fa.textContent = '📍 ' + (C.address || 'ท่าฉลอม สมุทรสาคร');
+
+    const fh = document.getElementById('footer-hours');
+    if (fh) fh.textContent = '🕒 ' + (C.hours || 'จ-ส 09:00–18:00');
+
+    const ffb = document.getElementById('footer-fb');
+    if (ffb && C.fb) {
+      ffb.innerHTML = '📘 <a href="' + C.fb + '" target="_blank" rel="noopener" style="color:var(--gray-400);">Facebook Page</a>';
+    }
+
+    /* ── COLOR MAP สำหรับ service cards ── */
+    const colorMap = {
+      'svc-blue':   { bg: 'var(--blue-lt)',   icon: 'var(--blue)' },
+      'svc-purple': { bg: 'var(--purple-lt)', icon: 'var(--purple)' },
+      'svc-orange': { bg: 'var(--orange-pale)',icon: 'var(--orange)' },
+      'svc-yellow': { bg: 'var(--yellow-lt)', icon: 'var(--yellow)' },
+      'svc-teal':   { bg: 'var(--teal-lt)',   icon: 'var(--teal)' },
+      'svc-navy':   { bg: 'rgba(15,23,42,.08)', icon: 'var(--navy)' },
+    };
+
+    /* ── Render SERVICES ── */
+    const svcGrid = document.getElementById('services-grid');
+    if (svcGrid && DB.services) {
+      const lineHrefVal = C.line ? (C.line.startsWith('http') ? C.line : 'https://line.me/ti/p/' + C.line) : 'https://line.me/ti/p/@993fnltu';
+      svcGrid.innerHTML = DB.services.map((s, i) => {
+        const cm = colorMap[s.color] || colorMap['svc-blue'];
+        const items = (s.items || '').split(',').map(x => x.trim()).filter(Boolean);
+        const isHighlight = i === DB.services.length - 1 ? ' svc-card--highlight' : '';
+        return `<div class="svc-card${isHighlight}" data-aos>
+          <div class="svc-icon-wrap ${s.color}">${s.icon}</div>
+          <h3>${s.name}</h3>
+          <ul class="svc-list">${items.map(it => `<li>${it}</li>`).join('')}</ul>
+          <a href="${lineHrefVal}" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>`;
+      }).join('');
+    }
+
+    /* ── Render WHY ── */
+    const whyGrid = document.getElementById('why-grid');
+    if (whyGrid && DB.why) {
+      whyGrid.innerHTML = DB.why.map(w => `
+        <div class="why-card" data-aos>
+          <div class="why-icon">${w.icon}</div>
+          <h3>${w.name}</h3>
+          <p>${w.desc}</p>
+        </div>`).join('');
+    }
+
+    /* ── Render PORTFOLIO ── */
+    const portColors = ['port-img--ssd','port-img--nb','port-img--printer','port-img--network','port-img--virus','port-img--ma'];
+    const portGrid = document.getElementById('portfolio-grid');
+    if (portGrid && DB.portfolio) {
+      portGrid.innerHTML = DB.portfolio.map((p, i) => `
+        <div class="port-card" data-aos>
+          <div class="port-img ${portColors[i % portColors.length]}"><span class="port-emoji">${p.icon}</span></div>
+          <div class="port-info">
+            <h4>${p.title}</h4>
+            <p>${p.desc}</p>
+            <span class="port-tag">${p.tag}</span>
+          </div>
+        </div>`).join('');
+    }
+
+    /* ── Render REVIEWS ── */
+    const revGrid = document.getElementById('reviews-grid');
+    if (revGrid && DB.reviews) {
+      revGrid.innerHTML = DB.reviews.map(r => {
+        const initial = r.name.replace('คุณ','').charAt(0) || '?';
+        const stars = '⭐'.repeat(Math.min(r.stars || 5, 5));
+        return `<div class="review-card" data-aos>
+          <div class="review-stars">${stars}</div>
+          <blockquote>"${r.text}"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">${initial}</div>
+            <div><strong>${r.name}</strong><span>${r.type}</span></div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    /* ── Render AREA ── */
+    const areaPills = document.getElementById('area-pills');
+    if (areaPills && DB.area) {
+      areaPills.innerHTML = DB.area.map((a, i) =>
+        `<div class="area-pill${i === 0 ? ' active' : ''}"><span>🗺️</span> ${a.name}</div>`
+      ).join('') + '<div class="area-pill area-pill--more">+ พื้นที่ใกล้เคียง</div>';
+    }
+
+    /* ── Render FAQ ── */
+    const faqList = document.getElementById('faq-list');
+    if (faqList && DB.faq) {
+      faqList.innerHTML = DB.faq.map(f => `
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>${f.q}</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>${f.a}</div>
+        </div>`).join('');
+    }
+
+    /* ── Render CONTACT ── */
+    const ctcGrid = document.getElementById('contact-grid');
+    if (ctcGrid) {
+      const lineUrl = C.line ? (C.line.startsWith('http') ? C.line : 'https://line.me/ti/p/' + C.line) : '#';
+      const fbUrl   = C.fb || '#';
+      const phone   = C.phone || '080-000-0000';
+      const hours   = C.hours || 'จ-ส 09:00–18:00';
+      const note    = C.note  || 'นัดล่วงหน้าได้ทุกวัน';
+      ctcGrid.innerHTML = `
+        <a href="${lineUrl}" class="contact-card contact-card--line" target="_blank" rel="noopener">
+          <div class="contact-icon">💬</div>
+          <h3>LINE Official</h3>
+          <p>${C.line || '@993fnltu'}</p>
+          <span class="contact-action">เปิด LINE →</span>
+        </a>
+        <a href="${fbUrl}" class="contact-card contact-card--fb" target="_blank" rel="noopener">
+          <div class="contact-icon">📘</div>
+          <h3>Facebook Page</h3>
+          <p>TA-CHALOM COMPUTER</p>
+          <span class="contact-action">ดูเพจ →</span>
+        </a>
+        <a href="tel:${phone.replace(/-/g,'')}" class="contact-card contact-card--tel">
+          <div class="contact-icon">📞</div>
+          <h3>โทรศัพท์</h3>
+          <p>${phone}</p>
+          <span class="contact-action">โทรเลย →</span>
+        </a>
+        <div class="contact-card contact-card--hours">
+          <div class="contact-icon">🕒</div>
+          <h3>เวลาทำการ</h3>
+          <p>${hours.replace('–','–').replace('-','–')}</p>
+          <span class="contact-action contact-action--muted">${note}</span>
+        </div>`;
+    }
+
+  })();
+  </script>
 </body>
 </html>

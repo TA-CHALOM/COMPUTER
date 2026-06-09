@@ -25,7 +25,14 @@
       background: #fff; border-radius: 16px; padding: 44px 40px; width: 360px;
       box-shadow: 0 8px 40px rgba(0,0,0,.3); text-align: center;
     }
-    .login-box img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--orange); }
+    /* ── LOGO in login box ── */
+    .login-logo-wrap {
+      width: 96px; height: 96px; border-radius: 50%; overflow: hidden;
+      margin: 0 auto 16px; border: 3px solid var(--orange);
+      box-shadow: 0 0 20px rgba(249,115,22,.35);
+      background: #fff; display: flex; align-items: center; justify-content: center;
+    }
+    .login-logo-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .login-box h2 { font-size: 1.3rem; margin-bottom: 4px; }
     .login-box p  { color: var(--gray-400); font-size: 0.88rem; margin-bottom: 28px; }
     .login-box input {
@@ -50,11 +57,17 @@
       display: flex; flex-direction: column;
     }
     .sidebar-brand {
-      display: flex; align-items: center; gap: 10px; padding: 20px 20px 16px;
+      display: flex; align-items: center; gap: 10px; padding: 16px 16px 14px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .sidebar-brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--orange); }
-    .sidebar-brand span { color: #fff; font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
+    /* ── Sidebar Logo (กลม, สวยงาม) ── */
+    .sidebar-logo-wrap {
+      width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+      border: 2px solid var(--orange); background: #fff;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sidebar-logo-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .sidebar-brand span { color: #fff; font-size: 0.82rem; font-weight: 700; line-height: 1.3; }
     .sidebar-nav { flex: 1; padding: 16px 0; }
     .nav-section { padding: 6px 20px 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-400); }
     .nav-item {
@@ -77,11 +90,27 @@
     .admin-main { margin-left: 240px; padding: 32px; min-height: 100vh; }
     .admin-topbar {
       display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 28px;
+      margin-bottom: 28px; gap: 12px; flex-wrap: wrap;
     }
     .admin-topbar h1 { font-size: 1.4rem; color: var(--navy); }
+    .topbar-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .page-section { display: none; }
     .page-section.active { display: block; }
+
+    /* ── PUBLISH BUTTON ── */
+    .btn-publish {
+      padding: 9px 20px; background: var(--green); color: #fff;
+      border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; font-family: inherit; transition: background .2s, transform .15s;
+      display: flex; align-items: center; gap: 6px; white-space: nowrap;
+    }
+    .btn-publish:hover { background: #16a34a; transform: translateY(-1px); }
+    .btn-publish:active { transform: none; }
+    .publish-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #fff;
+      animation: pulse-dot 1.5s infinite;
+    }
+    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.4} }
 
     /* ── CARDS ── */
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
@@ -175,6 +204,19 @@
 
     /* ── CONTACT INFO EDIT ── */
     .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ── Publish Banner ── */
+    .publish-banner {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(34,197,94,.3);
+      border-radius: var(--radius); padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      margin-bottom: 28px; flex-wrap: wrap;
+    }
+    .publish-banner-text h3 { color: #fff; font-size: 1rem; margin-bottom: 4px; }
+    .publish-banner-text p { color: var(--gray-400); font-size: 0.85rem; }
+    .publish-banner-btns { display: flex; gap: 10px; align-items: center; }
+
     @media (max-width: 900px) {
       .admin-sidebar { width: 200px; }
       .admin-main { margin-left: 200px; padding: 20px; }
@@ -194,7 +236,9 @@
 <!-- ===== LOGIN ===== -->
 <div id="login-screen">
   <div class="login-box">
-    <img src="logo.jpg" alt="Logo" />
+    <div class="login-logo-wrap">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
     <h2>TA-CHALOM COMPUTER</h2>
     <p>Admin Panel · เข้าสู่ระบบ</p>
     <input type="text" id="login-user" placeholder="Username" />
@@ -210,7 +254,9 @@
   <!-- SIDEBAR -->
   <aside class="admin-sidebar" id="sidebar">
     <div class="sidebar-brand">
-      <img src="logo.jpg" alt="Logo" />
+      <div class="sidebar-logo-wrap">
+        <img src="logo.jpg" alt="Logo" />
+      </div>
       <span>TA-CHALOM<br>COMPUTER</span>
     </div>
     <nav class="sidebar-nav">
@@ -238,11 +284,30 @@
   <main class="admin-main">
     <div class="admin-topbar">
       <h1 id="page-title">📊 Dashboard</h1>
-      <span id="admin-user-badge" style="font-size:.85rem;color:var(--gray-400)"></span>
+      <div class="topbar-right">
+        <span id="admin-user-badge" style="font-size:.85rem;color:var(--gray-400)"></span>
+        <button class="btn-publish" onclick="publishToSite()">
+          <span class="publish-dot"></span> 🚀 บันทึก & อัปเดตเว็บ
+        </button>
+      </div>
     </div>
 
     <!-- DASHBOARD -->
     <div class="page-section active" id="page-dashboard">
+      <!-- Publish Banner -->
+      <div class="publish-banner">
+        <div class="publish-banner-text">
+          <h3>🚀 วิธีใช้งาน Admin Panel</h3>
+          <p>แก้ไขข้อมูลในเมนูด้านซ้าย → กด <strong style="color:#4ade80">"บันทึก & อัปเดตเว็บ"</strong> → เปิด index.html ดูผลลัพธ์ได้เลย</p>
+        </div>
+        <div class="publish-banner-btns">
+          <a href="index.html" target="_blank" style="padding:9px 16px;background:rgba(255,255,255,.1);color:#fff;border-radius:8px;font-size:.88rem;font-weight:600;text-decoration:none;">👁️ ดูหน้าเว็บ</a>
+          <button class="btn-publish" onclick="publishToSite()">
+            <span class="publish-dot"></span> 🚀 บันทึก & อัปเดตเว็บ
+          </button>
+        </div>
+      </div>
+
       <div class="stats-row">
         <div class="stat-card"><div class="num" id="ds-services">0</div><div class="lbl">บริการ</div></div>
         <div class="stat-card"><div class="num" id="ds-portfolio">0</div><div class="lbl">ผลงาน</div></div>
@@ -253,10 +318,10 @@
         <div class="panel-head"><h3>สรุปข้อมูล</h3></div>
         <div style="padding:20px;color:var(--gray-600);font-size:.9rem;line-height:1.9;">
           ✅ เว็บไซต์: <strong>TA-CHALOM COMPUTER</strong><br>
-          💬 LINE: <strong>@993fnltu</strong><br>
-          📘 Facebook: <strong>facebook.com/adminsupport2021</strong><br>
-          📍 ที่อยู่: ท่าฉลอม สมุทรสาคร<br>
-          🕒 เวลาทำการ: จันทร์–เสาร์ 09:00–18:00 น.
+          💬 LINE: <strong id="dash-line">@993fnltu</strong><br>
+          📘 Facebook: <strong id="dash-fb">facebook.com/adminsupport2021</strong><br>
+          📍 ที่อยู่: <strong id="dash-addr">ท่าฉลอม สมุทรสาคร</strong><br>
+          🕒 เวลาทำการ: <strong id="dash-hours">จันทร์–เสาร์ 09:00–18:00 น.</strong>
         </div>
       </div>
     </div>
@@ -321,13 +386,14 @@
         <div class="panel-head"><h3>ข้อมูลติดต่อ</h3><button class="btn-add" onclick="saveContact()">💾 บันทึก</button></div>
         <div style="padding:24px;">
           <div class="info-grid">
-            <div class="form-group"><label>LINE ID</label><input id="c-line" placeholder="@993fnltu" /></div>
+            <div class="form-group"><label>LINE ID / URL</label><input id="c-line" placeholder="@993fnltu" /></div>
             <div class="form-group"><label>Facebook URL</label><input id="c-fb" placeholder="https://www.facebook.com/adminsupport2021" /></div>
             <div class="form-group"><label>เบอร์โทรศัพท์</label><input id="c-phone" placeholder="080-000-0000" /></div>
             <div class="form-group"><label>ที่อยู่</label><input id="c-address" placeholder="ท่าฉลอม สมุทรสาคร" /></div>
             <div class="form-group"><label>เวลาทำการ</label><input id="c-hours" placeholder="จ-ส 09:00–18:00" /></div>
             <div class="form-group"><label>หมายเหตุ</label><input id="c-note" placeholder="นัดล่วงหน้าได้ทุกวัน" /></div>
           </div>
+          <p style="font-size:.82rem;color:var(--gray-400);margin-top:8px;">* หลังบันทึกแล้ว กด "🚀 บันทึก & อัปเดตเว็บ" ที่มุมขวาบนเพื่อให้หน้าเว็บอัปเดตด้วย</p>
         </div>
       </div>
     </div>
@@ -337,8 +403,8 @@
 
 <!-- ===== MODAL ===== -->
 <div class="modal-overlay" id="modal-overlay" style="display:none" onclick="if(event.target===this)closeModal()">
-  <div class="modal" id="modal-box">
-    <h3 id="modal-title">เพิ่มรายการ</h3>
+  <div class="modal">
+    <h3 id="modal-title"></h3>
     <div id="modal-body"></div>
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal()">ยกเลิก</button>
@@ -351,11 +417,6 @@
 <div class="toast" id="toast"></div>
 
 <script>
-/* ============================================================
-   TA-CHALOM COMPUTER – Admin Panel Script
-   Data stored in localStorage (key: tc_admin_data)
-   ============================================================ */
-
 const ADMIN_USERS = [{ user: 'admin', pass: 'tachalom2025' }];
 const STORAGE_KEY = 'tc_admin_data';
 
@@ -370,19 +431,19 @@ const defaultData = {
     note: 'นัดล่วงหน้าได้ทุกวัน'
   },
   services: [
-    { id:1, name:'ซ่อมคอมพิวเตอร์ PC', icon:'💻', color:'svc-blue', items:'เครื่องช้า,ติดไวรัส,ลง Windows,เปลี่ยนอะไหล่' },
-    { id:2, name:'ซ่อมโน้ตบุ๊ก', icon:'💻', color:'svc-purple', items:'เปิดไม่ติด,จอดับ,เปลี่ยนแบต,คีย์บอร์ดเสีย' },
-    { id:3, name:'ซ่อม Printer', icon:'🖨️', color:'svc-orange', items:'พิมพ์ไม่ออก,กระดาษติด,ตั้งค่า Network,ล้างหัวพิมพ์' },
-    { id:4, name:'อัปเกรด SSD / RAM', icon:'⚡', color:'svc-yellow', items:'เพิ่มความเร็ว,ย้ายข้อมูล,ติดตั้ง Windows,เพิ่ม RAM' },
-    { id:5, name:'ติดตั้ง Network', icon:'🌐', color:'svc-teal', items:'Router/WiFi,เดินสาย LAN,แชร์ Printer,แก้เน็ตช้า' },
-    { id:6, name:'ดูแล IT บริษัท', icon:'🏢', color:'svc-navy', items:'MA รายเดือน,Remote Support,ตรวจสอบระบบ,ปรึกษา IT ฟรี' }
+    { id:1, name:'ซ่อมคอมพิวเตอร์ PC', icon:'💻', color:'svc-blue', items:'เครื่องช้า / ค้าง / เด้ง,ติดไวรัส / มัลแวร์,ลง Windows / โปรแกรม,เปลี่ยนอะไหล่ทุกชนิด' },
+    { id:2, name:'ซ่อมโน้ตบุ๊ก', icon:'💻', color:'svc-purple', items:'เปิดไม่ติด / ค้างบ่อย,จอดับ / เปลี่ยนจอ,เปลี่ยนแบตเตอรี่,คีย์บอร์ดเสีย / หน้าจอแตก' },
+    { id:3, name:'ซ่อม Printer', icon:'🖨️', color:'svc-orange', items:'พิมพ์ไม่ออก / หมึกไม่เข้า,กระดาษติด,ตั้งค่าพรินเตอร์เครือข่าย,เปลี่ยน head / ล้างหัวพิมพ์' },
+    { id:4, name:'อัปเกรด SSD / RAM', icon:'⚡', color:'svc-yellow', items:'เพิ่มความเร็วเครื่องทันใจ,ย้ายข้อมูลทุกไฟล์ ไม่หาย,ติดตั้ง Windows ใหม่,เพิ่ม RAM รองรับงานหนัก' },
+    { id:5, name:'ติดตั้งระบบ Network', icon:'🌐', color:'svc-teal', items:'Router / WiFi ให้แรง ไม่มีจุดอับ,เดินสาย LAN สำนักงาน,แชร์ Printer เครือข่าย,แก้ปัญหาเน็ตช้า / หลุด' },
+    { id:6, name:'ดูแล IT สำหรับบริษัท', icon:'🏢', color:'svc-navy', items:'MA รายเดือน ราคาพิเศษ,Remote Support ทันที,ตรวจสอบและบำรุงระบบ,ให้คำปรึกษาด้าน IT ฟรี' }
   ],
   why: [
-    { id:1, name:'ซ่อมถึงบ้าน', icon:'🚗', desc:'ไม่ต้องยกเครื่องไปไหน ช่างเข้าบริการถึงที่' },
+    { id:1, name:'ซ่อมถึงบ้าน', icon:'🚗', desc:'ไม่ต้องยกเครื่องไปไหน ช่างเข้าบริการถึงที่ สะดวกสุด ๆ' },
     { id:2, name:'แจ้งราคาก่อนซ่อม', icon:'💰', desc:'บอกราคาให้ทราบก่อนทุกครั้ง ไม่มีค่าใช้จ่ายแอบแฝง' },
-    { id:3, name:'รับประกันงานซ่อม', icon:'🛡️', desc:'มีการรับประกันหลังซ่อมทุกชิ้นงาน' },
-    { id:4, name:'ตรวจเช็กฟรี', icon:'⚡', desc:'วินิจฉัยอาการเบื้องต้นฟรี ก่อนตัดสินใจซ่อม' },
-    { id:5, name:'รับ-ส่งเครื่อง', icon:'🔄', desc:'บริการรับส่งเครื่องถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอม' },
+    { id:3, name:'รับประกันงานซ่อม', icon:'🛡️', desc:'มีการรับประกันหลังซ่อมทุกชิ้นงาน อุ่นใจหลังใช้บริการ' },
+    { id:4, name:'ตรวจเช็กฟรี', icon:'⚡', desc:'วินิจฉัยอาการเบื้องต้นฟรี ก่อนตัดสินใจซ่อมทุกครั้ง' },
+    { id:5, name:'รับ-ส่งเครื่อง', icon:'🔄', desc:'บริการรับส่งเครื่องถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอมและใกล้เคียง' },
     { id:6, name:'ดูแลทั้งบ้านและออฟฟิศ', icon:'🏢', desc:'รองรับทั้งลูกค้าทั่วไปและองค์กร มีแพ็กเกจ MA รายเดือน' }
   ],
   portfolio: [
@@ -396,10 +457,10 @@ const defaultData = {
   reviews: [
     { id:1, name:'คุณสมชาย', type:'ลูกค้า PC Desktop', stars:5, text:'เครื่องเร็วขึ้นมากหลังเปลี่ยน SSD ซ่อมถึงบ้าน ไม่ต้องยกไปไหน สะดวกมาก' },
     { id:2, name:'คุณวิภา', type:'ลูกค้า Notebook', stars:5, text:'โน้ตบุ๊กจอดับ ช่างมาซ่อมถึงบ้าน เปลี่ยนจอเสร็จภายในวันเดียว ราคาตามที่บอกไว้เป๊ะ' },
-    { id:3, name:'คุณนิตยา', type:'ลูกค้า Printer', stars:5, text:'Printer ใช้งานได้ปกติแล้ว ตั้งค่าเครือข่ายให้ด้วย พิมพ์จากมือถือได้เลย' },
+    { id:3, name:'คุณนิตยา', type:'ลูกค้า Printer', stars:5, text:'Printer ใช้งานได้ปกติแล้ว ตั้งค่าเครือข่ายให้ด้วย พิมพ์จากมือถือได้เลย ประทับใจมาก' },
     { id:4, name:'คุณประพัทธ์', type:'ลูกค้า IT Support', stars:5, text:'ทำ MA รายเดือนให้บริษัท ดูแลดี Remote Support ไว ปัญหา IT แทบไม่มีแล้ว' },
-    { id:5, name:'คุณมานะ', type:'ลูกค้า Network', stars:5, text:'วาง Network บ้านใหม่ WiFi แรงทุกห้อง ช่างแนะนำอุปกรณ์ที่คุ้มค่า' },
-    { id:6, name:'คุณกิตติ', type:'ลูกค้า PC Desktop', stars:5, text:'เครื่องติดไวรัสหนักมาก ช่างจัดการได้เรียบร้อย ลง Windows ใหม่ เร็วเหมือนเครื่องใหม่' }
+    { id:5, name:'คุณมานะ', type:'ลูกค้า Network', stars:5, text:'วาง Network บ้านใหม่ WiFi แรงทุกห้อง ช่างแนะนำอุปกรณ์ที่คุ้มค่า ไม่ขายของเกิน' },
+    { id:6, name:'คุณกิตติ', type:'ลูกค้า PC Desktop', stars:5, text:'เครื่องติดไวรัสหนักมาก ช่างจัดการได้เรียบร้อย ลง Windows ใหม่ เร็วเหมือนเครื่องใหม่เลย' }
   ],
   faq: [
     { id:1, q:'ซ่อมถึงบ้านคิดค่าเดินทางไหม?', a:'ฟรีในพื้นที่ท่าฉลอม – สมุทรสาคร สำหรับพื้นที่ไกลออกไปอาจมีค่าเดินทางเพิ่มเล็กน้อย' },
@@ -434,6 +495,12 @@ function saveDB() {
 }
 function nextId(arr) {
   return arr.length ? Math.max(...arr.map(x => x.id)) + 1 : 1;
+}
+
+/* ── PUBLISH ── บันทึก DB ลง localStorage ให้ index.html อ่าน ── */
+function publishToSite() {
+  saveDB();
+  showToast('✅ อัปเดตเว็บสำเร็จ! รีโหลดหน้าเว็บเพื่อดูผลลัพธ์', 'success');
 }
 
 /* ── AUTH ── */
@@ -478,6 +545,11 @@ function updateDashboard() {
   document.getElementById('ds-portfolio').textContent = DB.portfolio.length;
   document.getElementById('ds-reviews').textContent = DB.reviews.length;
   document.getElementById('ds-faq').textContent = DB.faq.length;
+  const c = DB.contact || {};
+  const dl = document.getElementById('dash-line'); if(dl) dl.textContent = c.line || '@993fnltu';
+  const df = document.getElementById('dash-fb');   if(df) df.textContent = (c.fb||'').replace('https://','');
+  const da = document.getElementById('dash-addr'); if(da) da.textContent = c.address || 'ท่าฉลอม สมุทรสาคร';
+  const dh = document.getElementById('dash-hours');if(dh) dh.textContent = c.hours || 'จ-ส 09:00–18:00';
 }
 
 function renderServices() {
@@ -633,7 +705,7 @@ function saveModal() {
     DB[s].push(item);
   }
   saveDB(); renderAll(); closeModal();
-  showToast('✅ บันทึกเรียบร้อย', 'success');
+  showToast('✅ บันทึกเรียบร้อย — กด "🚀 บันทึก & อัปเดตเว็บ" เพื่ออัปเดตหน้าเว็บ', 'success');
 }
 
 function delItem(section, id) {
@@ -656,8 +728,8 @@ function saveContact() {
     line: g('c-line'), fb: g('c-fb'), phone: g('c-phone'),
     address: g('c-address'), hours: g('c-hours'), note: g('c-note')
   };
-  saveDB();
-  showToast('✅ บันทึกข้อมูลติดต่อแล้ว', 'success');
+  saveDB(); updateDashboard();
+  showToast('✅ บันทึกข้อมูลติดต่อแล้ว — กด "🚀 บันทึก & อัปเดตเว็บ" เพื่ออัปเดตหน้าเว็บ', 'success');
 }
 
 /* ── TOAST ── */
@@ -666,7 +738,7 @@ function showToast(msg, type='success') {
   t.textContent = msg;
   t.className = `toast toast-${type}`;
   requestAnimationFrame(() => t.classList.add('show'));
-  setTimeout(() => t.classList.remove('show'), 2800);
+  setTimeout(() => t.classList.remove('show'), 3200);
 }
 
 /* ── INIT ── */
