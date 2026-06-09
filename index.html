@@ -14,7 +14,7 @@
   <header class="navbar" id="navbar">
     <div class="nav-inner">
       <div class="brand">
-        <img src="logo.jpg" alt="ท่าฉลอมคอมพิวเตอร์" class="nav-logo" />
+        <img src="logo.jpg" alt="ท่าฉลอมคอมพิวเตอร์" class="nav-logo" id="navLogo" />
         <span class="brand-name">ท่าฉลอมคอมพิวเตอร์</span>
       </div>
       <nav class="nav-tabs" id="navTabs">
@@ -35,13 +35,13 @@
 
     <!-- ===== HOME TAB ===== -->
     <section class="tab-content active" id="tab-home">
-      <div class="hero">
+      <div class="hero" id="heroSection">
         <div class="hero-bg-circles">
           <div class="circle c1"></div>
           <div class="circle c2"></div>
         </div>
         <div class="hero-content">
-          <img src="logo.jpg" alt="Logo" class="hero-logo" />
+          <img src="logo.jpg" alt="Logo" class="hero-logo" id="heroLogo" />
           <h1 class="hero-title">ท่าฉลอมคอมพิวเตอร์</h1>
           <p class="hero-tagline">งานซ่อมเราเน้น · งานโปรแกรมเราก็ถนัด<br/>ครบวงจรเรื่องไอที <span class="highlight">ต้องที่นี่ที่เดียว!</span></p>
           <div class="hero-badges">
@@ -56,15 +56,22 @@
         </div>
       </div>
 
+      <!-- Home Video Section -->
+      <div class="section-wrapper" id="homeVideoSection" style="display:none">
+        <div class="section-label">🎬 วิดีโอแนะนำร้าน</div>
+        <div class="video-wrap" id="homeVideoWrap"></div>
+      </div>
+
+      <!-- Home Photo Gallery -->
+      <div class="section-wrapper" id="homeGallerySection" style="display:none">
+        <div class="section-label">📸 ผลงานของเรา</div>
+        <div class="gallery-grid" id="homeGallery"></div>
+      </div>
+
       <div class="section-wrapper">
         <div class="section-label">📋 เคสล่าสุด</div>
-        <div class="case-card">
-          <div class="case-icon">🖨️</div>
-          <div class="case-body">
-            <h3>ซ่อม Epson L220 – ดึงกระดาษไม่ต่อเนื่อง</h3>
-            <p>ลูกค้านำ Printer Epson L220 เข้ามาซ่อมอาการดึงกระดาษไม่ต่อเนื่อง ตรวจสอบพบชุดเฟืองและอะไหล่ภายในมีการสึกหรอ จึงดำเนินการ<strong>เปลี่ยนอะไหล่ใหม่</strong> พร้อมทดสอบการใช้งานก่อนส่งมอบ</p>
-            <span class="case-status done">✔ ส่งมอบแล้ว</span>
-          </div>
+        <div id="latestCasesWrap">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -87,13 +94,22 @@
         <h2>🔧 งานซ่อม</h2>
         <p>คอมช้า คอมเสีย ไม่ต้องยกไปไหน! มีบริการซ่อมถึงบ้านในพื้นที่ท่าฉลอม – สมุทรสาคร</p>
       </div>
+
+      <!-- Repair Video -->
+      <div class="section-wrapper" id="repairVideoSection" style="display:none">
+        <div class="section-label">🎬 วิดีโองานซ่อม</div>
+        <div class="video-wrap" id="repairVideoWrap"></div>
+      </div>
+
+      <!-- Repair Gallery -->
+      <div class="section-wrapper" id="repairGallerySection" style="display:none">
+        <div class="section-label">📸 ตัวอย่างงานซ่อม</div>
+        <div class="gallery-grid" id="repairGallery"></div>
+      </div>
+
       <div class="section-wrapper">
-        <div class="service-list">
-          <div class="svc-item"><div class="svc-num">01</div><div class="svc-detail"><h4>ซ่อมคอม / โน้ตบุ๊ก ทุกอาการ</h4><p>เปิดไม่ติด จอดับ ร้อนผิดปกติ บลูสกรีน จัดการได้ทุกเคส</p></div></div>
-          <div class="svc-item"><div class="svc-num">02</div><div class="svc-detail"><h4>ซ่อม Printer จบทุกปัญหา</h4><p>ดึงกระดาษไม่ขึ้น หมึกไม่ออก ตลับหมึกเสีย เปลี่ยนอะไหล่ทุกยี่ห้อ</p></div></div>
-          <div class="svc-item"><div class="svc-num">03</div><div class="svc-detail"><h4>เครื่องเปิดไม่ติด / ใช้งานไม่ได้</h4><p>วินิจฉัยตรงจุด แก้ได้จริง ทั้งฮาร์ดแวร์และซอฟต์แวร์</p></div></div>
-          <div class="svc-item"><div class="svc-num">04</div><div class="svc-detail"><h4>อัปเกรด SSD เพิ่มสปีดแรงทันใจ</h4><p>เปลี่ยน HDD → SSD บูตเร็วขึ้นหลายเท่า รับประกันการย้ายข้อมูล</p></div></div>
-          <div class="svc-item"><div class="svc-num">05</div><div class="svc-detail"><h4>บริการรับ-ส่งถึงหน้าบ้าน</h4><p>สะดวกสุด ๆ ไม่ต้องเสียเวลาเดินทาง ครอบคลุมพื้นที่ท่าฉลอม – สมุทรสาคร</p></div></div>
+        <div class="service-list" id="repairServiceList">
+          <!-- Rendered by JS -->
         </div>
       </div>
       <div class="section-wrapper">
@@ -110,11 +126,22 @@
         <h2>🌐 บริการเครือข่าย</h2>
         <p>แก้ปัญหาเน็ตช้า เน็ตหลุด วาง LAN ติดตั้ง WiFi ครอบคลุมทุกจุด</p>
       </div>
+
+      <!-- Network Video -->
+      <div class="section-wrapper" id="networkVideoSection" style="display:none">
+        <div class="section-label">🎬 วิดีโองานเครือข่าย</div>
+        <div class="video-wrap" id="networkVideoWrap"></div>
+      </div>
+
+      <!-- Network Gallery -->
+      <div class="section-wrapper" id="networkGallerySection" style="display:none">
+        <div class="section-label">📸 ตัวอย่างงานเครือข่าย</div>
+        <div class="gallery-grid" id="networkGallery"></div>
+      </div>
+
       <div class="section-wrapper">
-        <div class="net-cards">
-          <div class="net-card"><div class="net-icon">🏗️</div><h4>วางระบบ Network / เดินสาย LAN</h4><p>ทั้งบ้านและร้าน ออกแบบโครงสร้างเน็ตเวิร์กให้เหมาะสม รองรับการขยายในอนาคต</p></div>
-          <div class="net-card"><div class="net-icon">📶</div><h4>ติดตั้ง WiFi ให้แรง</h4><p>เลือกอุปกรณ์และจุดติดตั้งที่เหมาะสม ครอบคลุมทุกมุมบ้านหรือร้านค้า ไม่มีจุดอับสัญญาณ</p></div>
-          <div class="net-card"><div class="net-icon">🛠️</div><h4>แก้ปัญหาเน็ตช้า / เน็ตหลุด</h4><p>วิเคราะห์ปัญหาตรงจุด ไม่ว่าจะเป็นอุปกรณ์ การตั้งค่า หรือสัญญาณรบกวน แก้ได้ครบ</p></div>
+        <div class="net-cards" id="networkCardList">
+          <!-- Rendered by JS -->
         </div>
       </div>
     </section>
@@ -125,11 +152,22 @@
         <h2>💻 งานโปรแกรม</h2>
         <p>รับเขียนโปรแกรมและระบบงานตามความต้องการ ครบจบที่เดียว</p>
       </div>
+
+      <!-- Software Video -->
+      <div class="section-wrapper" id="softwareVideoSection" style="display:none">
+        <div class="section-label">🎬 วิดีโองานโปรแกรม</div>
+        <div class="video-wrap" id="softwareVideoWrap"></div>
+      </div>
+
+      <!-- Software Gallery -->
+      <div class="section-wrapper" id="softwareGallerySection" style="display:none">
+        <div class="section-label">📸 ตัวอย่างผลงาน</div>
+        <div class="gallery-grid" id="softwareGallery"></div>
+      </div>
+
       <div class="section-wrapper">
-        <div class="soft-grid">
-          <div class="soft-card"><div class="soft-icon">📦</div><h4>ระบบสต๊อกสินค้า</h4><p>จัดการคลังสินค้า รับ-จ่าย สต็อก รายงานสรุป ใช้งานง่ายเหมาะทุกธุรกิจ</p></div>
-          <div class="soft-card"><div class="soft-icon">🗂️</div><h4>ระบบจัดการงาน / ระบบภายในองค์กร</h4><p>HR บันทึกเวลา ติดตามงาน อนุมัติเอกสาร ปรับแต่งตามโครงสร้างองค์กร</p></div>
-          <div class="soft-card"><div class="soft-icon">🌐</div><h4>Web Application</h4><p>ออกแบบและพัฒนาเว็บไซต์และแอปพลิเคชันตามความต้องการของธุรกิจ ครบจบที่เดียว</p></div>
+        <div class="soft-grid" id="softwareCardList">
+          <!-- Rendered by JS -->
         </div>
         <div class="free-check-banner" style="margin-top:2rem">
           <span>💡 ปรึกษาความต้องการระบบฟรี ไม่มีข้อผูกมัด</span>
@@ -152,9 +190,7 @@
           <button class="cat-btn" data-cat="printer">🖨️ Printer</button>
           <button class="cat-btn" data-cat="accessories">🖱️ อุปกรณ์เสริม</button>
         </div>
-        <div class="product-grid" id="productGrid">
-          <!-- Rendered by JS from localStorage -->
-        </div>
+        <div class="product-grid" id="productGrid"></div>
       </div>
     </section>
 
@@ -164,7 +200,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="logo.jpg" alt="Logo" class="footer-logo" />
+        <img src="logo.jpg" alt="Logo" class="footer-logo" id="footerLogo" />
         <div>
           <strong>ท่าฉลอมคอมพิวเตอร์</strong>
           <p>ท่าฉลอม – สมุทรสาคร</p>
@@ -204,7 +240,7 @@
         </div>
         <div class="form-error" id="loginError"></div>
         <button class="btn-primary full" onclick="doLogin()">เข้าสู่ระบบ</button>
-        <button class="btn-ghost full" onclick="closeModal('loginModal')">ยกเลิก</button>
+        <button class="btn-ghost full" onclick="closeModal('loginModal')" style="margin-top:.5rem">ยกเลิก</button>
       </div>
     </div>
   </div>
@@ -215,52 +251,199 @@
       <div class="admin-header">
         <div class="admin-title">
           <span class="admin-badge">⚙️ Admin Panel</span>
-          <h3>จัดการสินค้า</h3>
+          <h3 id="adminPanelTitle">จัดการสินค้า</h3>
         </div>
         <div class="admin-header-actions">
-          <button class="btn-primary small" onclick="openProductForm()">+ เพิ่มสินค้าใหม่</button>
           <button class="btn-danger small" onclick="doLogout()">ออกจากระบบ</button>
           <button class="modal-close" onclick="closeModal('adminPanel')">✕</button>
         </div>
       </div>
 
-      <!-- Stats -->
-      <div class="admin-stats" id="adminStats"></div>
-
-      <!-- Product Table -->
-      <div class="admin-table-wrap">
-        <table class="admin-table" id="adminTable">
-          <thead>
-            <tr>
-              <th>ไอคอน</th>
-              <th>ชื่อสินค้า</th>
-              <th>หมวดหมู่</th>
-              <th>รายละเอียด</th>
-              <th>ราคา</th>
-              <th>สถานะ</th>
-              <th>จัดการ</th>
-            </tr>
-          </thead>
-          <tbody id="adminTableBody"></tbody>
-        </table>
+      <!-- Admin Sub-tabs -->
+      <div class="admin-subtabs">
+        <button class="admin-tab-btn active" data-section="products" onclick="switchAdminSection('products')">🛒 สินค้า</button>
+        <button class="admin-tab-btn" data-section="repair" onclick="switchAdminSection('repair')">🔧 งานซ่อม</button>
+        <button class="admin-tab-btn" data-section="network" onclick="switchAdminSection('network')">🌐 เครือข่าย</button>
+        <button class="admin-tab-btn" data-section="software" onclick="switchAdminSection('software')">💻 โปรแกรม</button>
+        <button class="admin-tab-btn" data-section="media" onclick="switchAdminSection('media')">🖼️ รูป/วิดีโอ</button>
       </div>
 
-      <!-- Change Password -->
-      <div class="pw-section">
-        <h4>🔑 เปลี่ยนรหัสผ่าน Admin</h4>
-        <div class="pw-change-row">
-          <div class="pw-wrap">
-            <input type="password" id="newPw1" placeholder="รหัสผ่านใหม่" />
-            <button class="pw-toggle" onclick="togglePw('newPw1', this)">👁️</button>
-          </div>
-          <div class="pw-wrap">
-            <input type="password" id="newPw2" placeholder="ยืนยันรหัสผ่านใหม่" />
-            <button class="pw-toggle" onclick="togglePw('newPw2', this)">👁️</button>
-          </div>
-          <button class="btn-primary small" onclick="changePassword()">บันทึก</button>
+      <!-- SECTION: Products -->
+      <div class="admin-section active" id="admin-products">
+        <div class="admin-section-toolbar">
+          <button class="btn-primary small" onclick="openProductForm()">+ เพิ่มสินค้าใหม่</button>
         </div>
-        <div class="form-error" id="pwError"></div>
+        <div class="admin-stats" id="adminStats"></div>
+        <div class="admin-table-wrap">
+          <table class="admin-table" id="adminTable">
+            <thead>
+              <tr>
+                <th>รูป/ไอคอน</th>
+                <th>ชื่อสินค้า</th>
+                <th>หมวดหมู่</th>
+                <th>รายละเอียด</th>
+                <th>ราคา</th>
+                <th>สถานะ</th>
+                <th>จัดการ</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody"></tbody>
+          </table>
+        </div>
+        <div class="pw-section">
+          <h4>🔑 เปลี่ยนรหัสผ่าน Admin</h4>
+          <div class="pw-change-row">
+            <div class="pw-wrap">
+              <input type="password" id="newPw1" placeholder="รหัสผ่านใหม่" />
+              <button class="pw-toggle" onclick="togglePw('newPw1', this)">👁️</button>
+            </div>
+            <div class="pw-wrap">
+              <input type="password" id="newPw2" placeholder="ยืนยันรหัสผ่านใหม่" />
+              <button class="pw-toggle" onclick="togglePw('newPw2', this)">👁️</button>
+            </div>
+            <button class="btn-primary small" onclick="changePassword()">บันทึก</button>
+          </div>
+          <div class="form-error" id="pwError"></div>
+        </div>
       </div>
+
+      <!-- SECTION: Repair Items -->
+      <div class="admin-section" id="admin-repair">
+        <div class="admin-section-toolbar">
+          <button class="btn-primary small" onclick="openServiceForm('repair')">+ เพิ่มรายการซ่อม</button>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>#</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
+            </thead>
+            <tbody id="repairTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION: Network Items -->
+      <div class="admin-section" id="admin-network">
+        <div class="admin-section-toolbar">
+          <button class="btn-primary small" onclick="openServiceForm('network')">+ เพิ่มบริการเครือข่าย</button>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>ไอคอน</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
+            </thead>
+            <tbody id="networkTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION: Software Items -->
+      <div class="admin-section" id="admin-software">
+        <div class="admin-section-toolbar">
+          <button class="btn-primary small" onclick="openServiceForm('software')">+ เพิ่มบริการโปรแกรม</button>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>ไอคอน</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
+            </thead>
+            <tbody id="softwareTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION: Media (Images & Videos) -->
+      <div class="admin-section" id="admin-media">
+        <div class="admin-media-grid">
+
+          <!-- Logo -->
+          <div class="media-card">
+            <h4>🖼️ โลโก้ร้าน</h4>
+            <img id="previewLogo" src="logo.jpg" class="media-preview-img" alt="Logo Preview" />
+            <label class="upload-label">
+              <input type="file" accept="image/*" onchange="uploadMedia('logo', this)" />
+              📂 เปลี่ยนโลโก้
+            </label>
+          </div>
+
+          <!-- Home Page Gallery -->
+          <div class="media-card">
+            <h4>📸 แกลเลอรี่หน้าหลัก</h4>
+            <div class="mini-gallery" id="adminHomeGallery"></div>
+            <label class="upload-label">
+              <input type="file" accept="image/*" multiple onchange="uploadGallery('home', this)" />
+              📂 เพิ่มรูปภาพ
+            </label>
+          </div>
+
+          <!-- Repair Gallery -->
+          <div class="media-card">
+            <h4>📸 รูปงานซ่อม</h4>
+            <div class="mini-gallery" id="adminRepairGallery"></div>
+            <label class="upload-label">
+              <input type="file" accept="image/*" multiple onchange="uploadGallery('repair', this)" />
+              📂 เพิ่มรูปภาพ
+            </label>
+          </div>
+
+          <!-- Network Gallery -->
+          <div class="media-card">
+            <h4>📸 รูปงานเครือข่าย</h4>
+            <div class="mini-gallery" id="adminNetworkGallery"></div>
+            <label class="upload-label">
+              <input type="file" accept="image/*" multiple onchange="uploadGallery('network', this)" />
+              📂 เพิ่มรูปภาพ
+            </label>
+          </div>
+
+          <!-- Software Gallery -->
+          <div class="media-card">
+            <h4>📸 รูปผลงานโปรแกรม</h4>
+            <div class="mini-gallery" id="adminSoftwareGallery"></div>
+            <label class="upload-label">
+              <input type="file" accept="image/*" multiple onchange="uploadGallery('software', this)" />
+              📂 เพิ่มรูปภาพ
+            </label>
+          </div>
+
+          <!-- Videos (YouTube URL) -->
+          <div class="media-card full-width">
+            <h4>🎬 วิดีโอ YouTube (ใส่ URL หรือ Embed ID)</h4>
+            <div class="video-url-grid">
+              <div class="form-group">
+                <label>🏠 วิดีโอหน้าหลัก</label>
+                <div class="video-input-row">
+                  <input type="text" id="videoHome" placeholder="https://www.youtube.com/watch?v=..." />
+                  <button class="btn-primary small" onclick="saveVideoUrl('home')">บันทึก</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>🔧 วิดีโองานซ่อม</label>
+                <div class="video-input-row">
+                  <input type="text" id="videoRepair" placeholder="https://www.youtube.com/watch?v=..." />
+                  <button class="btn-primary small" onclick="saveVideoUrl('repair')">บันทึก</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>🌐 วิดีโอเครือข่าย</label>
+                <div class="video-input-row">
+                  <input type="text" id="videoNetwork" placeholder="https://www.youtube.com/watch?v=..." />
+                  <button class="btn-primary small" onclick="saveVideoUrl('network')">บันทึก</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>💻 วิดีโอโปรแกรม</label>
+                <div class="video-input-row">
+                  <input type="text" id="videoSoftware" placeholder="https://www.youtube.com/watch?v=..." />
+                  <button class="btn-primary small" onclick="saveVideoUrl('software')">บันทึก</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -272,9 +455,28 @@
       </div>
       <div class="modal-body">
         <input type="hidden" id="productId" />
+
+        <!-- Product Image Upload -->
+        <div class="form-group">
+          <label>รูปสินค้า (อัปโหลดรูปจริง)</label>
+          <div class="prod-img-upload-area">
+            <div class="prod-img-preview" id="prodImgPreview">
+              <span id="prodImgPlaceholder">📷 คลิกเพื่อเลือกรูป</span>
+              <img id="prodImgThumb" src="" alt="" style="display:none" />
+            </div>
+            <div class="prod-img-actions">
+              <label class="upload-label small">
+                <input type="file" id="productImageFile" accept="image/*" onchange="previewProductImage(this)" />
+                📂 เลือกรูปภาพ
+              </label>
+              <button class="btn-ghost small" onclick="clearProductImage()">🗑️ ลบรูป</button>
+            </div>
+          </div>
+        </div>
+
         <div class="form-row">
           <div class="form-group">
-            <label>ไอคอน (Emoji)</label>
+            <label>ไอคอน Emoji (ถ้าไม่มีรูป)</label>
             <div class="emoji-row">
               <input type="text" id="productIcon" placeholder="🖥️" maxlength="4" />
               <div class="emoji-presets">
@@ -336,12 +538,75 @@
     </div>
   </div>
 
+  <!-- ===== SERVICE FORM MODAL (repair / network / software) ===== -->
+  <div class="modal-overlay" id="serviceModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="serviceFormTitle">เพิ่มรายการ</h3>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="serviceType" />
+        <input type="hidden" id="serviceId" />
+
+        <!-- Service Image Upload -->
+        <div class="form-group">
+          <label>รูปประกอบ (ถ้ามี)</label>
+          <div class="prod-img-upload-area">
+            <div class="prod-img-preview" id="svcImgPreview">
+              <span id="svcImgPlaceholder">📷 คลิกเพื่อเลือกรูป</span>
+              <img id="svcImgThumb" src="" alt="" style="display:none" />
+            </div>
+            <div class="prod-img-actions">
+              <label class="upload-label small">
+                <input type="file" id="serviceImageFile" accept="image/*" onchange="previewServiceImage(this)" />
+                📂 เลือกรูปภาพ
+              </label>
+              <button class="btn-ghost small" onclick="clearServiceImage()">🗑️ ลบรูป</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ไอคอน Emoji</label>
+          <div class="emoji-row">
+            <input type="text" id="serviceIcon" placeholder="🔧" maxlength="4" />
+            <div class="emoji-presets">
+              <span onclick="setSvcEmoji('🔧')">🔧</span>
+              <span onclick="setSvcEmoji('🖥️')">🖥️</span>
+              <span onclick="setSvcEmoji('🖨️')">🖨️</span>
+              <span onclick="setSvcEmoji('📡')">📡</span>
+              <span onclick="setSvcEmoji('📶')">📶</span>
+              <span onclick="setSvcEmoji('🛠️')">🛠️</span>
+              <span onclick="setSvcEmoji('💻')">💻</span>
+              <span onclick="setSvcEmoji('📦')">📦</span>
+              <span onclick="setSvcEmoji('🗂️')">🗂️</span>
+              <span onclick="setSvcEmoji('🌐')">🌐</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>หัวข้อ</label>
+          <input type="text" id="serviceTitle" placeholder="เช่น ซ่อมคอม / โน้ตบุ๊ก ทุกอาการ" />
+        </div>
+        <div class="form-group">
+          <label>รายละเอียด</label>
+          <textarea id="serviceDesc" rows="3" placeholder="อธิบายรายละเอียดบริการ..."></textarea>
+        </div>
+        <div class="form-error" id="serviceError"></div>
+        <div class="modal-actions">
+          <button class="btn-primary full" onclick="saveService()">💾 บันทึก</button>
+          <button class="btn-ghost full" onclick="closeModal('serviceModal')">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== DELETE CONFIRM MODAL ===== -->
   <div class="modal-overlay" id="deleteModal">
     <div class="modal-box small">
       <div class="modal-body" style="text-align:center;padding:2rem">
         <div style="font-size:3rem;margin-bottom:1rem">🗑️</div>
-        <h3 style="margin-bottom:.5rem">ลบสินค้า?</h3>
+        <h3 style="margin-bottom:.5rem">ลบรายการนี้?</h3>
         <p id="deleteProductName" style="color:var(--text-muted);margin-bottom:1.5rem"></p>
         <div style="display:flex;gap:.75rem">
           <button class="btn-danger full" onclick="confirmDelete()">ลบเลย</button>
@@ -349,6 +614,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="" alt="" />
   </div>
 
   <!-- Toast container -->
