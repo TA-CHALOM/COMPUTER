@@ -3,628 +3,631 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ท่าฉลอมคอมพิวเตอร์ – ซ่อม ขาย ครบวงจร</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Sarun IT Service – ซ่อมคอม สมุทรสาคร ท่าฉลอม</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="บริการซ่อมคอมพิวเตอร์ โน้ตบุ๊ก Printer ติดตั้ง Network ถึงบ้าน พื้นที่ท่าฉลอม – สมุทรสาคร ตรวจเช็กฟรี แจ้งราคาก่อนซ่อม รับประกันงาน" />
+  <meta name="keywords" content="ซ่อมคอม สมุทรสาคร, ซ่อมโน้ตบุ๊ก ท่าฉลอม, ซ่อม printer มหาชัย, ติดตั้ง network สมุทรสาคร, Sarun IT Service" />
+  <meta name="author" content="Sarun IT Service" />
+  <meta property="og:title" content="Sarun IT Service – ซ่อมคอมถึงบ้าน ท่าฉลอม สมุทรสาคร" />
+  <meta property="og:description" content="คอมช้า คอมเสีย ไม่ต้องยกไปไหน! บริการซ่อมถึงบ้าน ตรวจเช็กฟรี แจ้งราคาก่อนซ่อม รับประกันงาน" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <div class="brand">
-        <img src="logo.jpg" alt="ท่าฉลอมคอมพิวเตอร์" class="nav-logo" id="navLogo" />
-        <span class="brand-name">ท่าฉลอมคอมพิวเตอร์</span>
-      </div>
-      <nav class="nav-tabs" id="navTabs">
-        <button class="tab-btn active" data-tab="home">🏠 หน้าหลัก</button>
-        <button class="tab-btn" data-tab="repair">🔧 งานซ่อม</button>
-        <button class="tab-btn" data-tab="network">🌐 เครือข่าย</button>
-        <button class="tab-btn" data-tab="software">💻 โปรแกรม</button>
-        <button class="tab-btn" data-tab="shop">🛒 ร้านค้า</button>
+      <a href="#hero" class="brand">
+        <div class="brand-icon">🔧</div>
+        <div class="brand-text">
+          <span class="brand-name">Sarun IT Service</span>
+          <span class="brand-sub">ท่าฉลอม · สมุทรสาคร</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="เมนูหลัก">
+        <a href="#hero"     class="nav-link active">🏠 หน้าแรก</a>
+        <a href="#services" class="nav-link">🔧 บริการ</a>
+        <a href="#why"      class="nav-link">⭐ จุดเด่น</a>
+        <a href="#portfolio" class="nav-link">🛠️ ผลงาน</a>
+        <a href="#reviews"  class="nav-link">💬 รีวิว</a>
+        <a href="#area"     class="nav-link">📍 พื้นที่</a>
+        <a href="#contact"  class="nav-link">📞 ติดต่อ</a>
       </nav>
-      <button class="admin-btn" id="adminNavBtn" title="เข้าสู่ระบบ Admin">⚙️</button>
-      <button class="hamburger" id="hamburger" aria-label="เมนู">
+
+      <a href="https://line.me/ti/p/@sarun-it" class="btn-line-nav" target="_blank" rel="noopener">
+        💬 LINE
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="เปิดเมนู" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="mainContent">
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="badge-loc">📍 ท่าฉลอม – สมุทรสาคร</span>
+        <span class="badge-free">✅ ตรวจเช็กฟรีเบื้องต้น</span>
+      </div>
+      <h1 class="hero-title">
+        💻 คอมช้า คอมเสีย<br>
+        <span class="accent">ไม่ต้องยกไปไหน!</span>
+      </h1>
+      <p class="hero-desc">🚗 บริการซ่อมถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอม – สมุทรสาคร<br>รวดเร็ว ตรงใจ ราคาโปร่งใส</p>
 
-    <!-- ===== HOME TAB ===== -->
-    <section class="tab-content active" id="tab-home">
-      <div class="hero" id="heroSection">
-        <div class="hero-bg-circles">
-          <div class="circle c1"></div>
-          <div class="circle c2"></div>
+      <div class="hero-checks">
+        <div class="check-item"><span class="check-dot"></span>ตรวจเช็กฟรีเบื้องต้น</div>
+        <div class="check-item"><span class="check-dot"></span>รับ-ส่งถึงบ้าน</div>
+        <div class="check-item"><span class="check-dot"></span>รับประกันงานซ่อม</div>
+        <div class="check-item"><span class="check-dot"></span>แจ้งราคาก่อนซ่อม</div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="https://line.me/ti/p/@sarun-it" class="btn-primary" target="_blank" rel="noopener">
+          🟢 ติดต่อผ่าน LINE
+        </a>
+        <a href="tel:0800000000" class="btn-outline">
+          📞 โทรเลย
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">งานซ่อมสำเร็จ</span>
         </div>
-        <div class="hero-content">
-          <img src="logo.jpg" alt="Logo" class="hero-logo" id="heroLogo" />
-          <h1 class="hero-title">ท่าฉลอมคอมพิวเตอร์</h1>
-          <p class="hero-tagline">งานซ่อมเราเน้น · งานโปรแกรมเราก็ถนัด<br/>ครบวงจรเรื่องไอที <span class="highlight">ต้องที่นี่ที่เดียว!</span></p>
-          <div class="hero-badges">
-            <span class="badge">📍 ท่าฉลอม – สมุทรสาคร</span>
-            <span class="badge">🚗 ซ่อมถึงบ้าน</span>
-            <span class="badge">✅ ปรึกษาฟรี</span>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num">5 ★</span>
+          <span class="stat-label">รีวิวเฉลี่ย</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">พื้นที่บริการ</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="scroll-arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">🔧 บริการของเรา</div>
+        <h2>บริการซ่อมและดูแลระบบ IT</h2>
+        <p class="section-desc">ครอบคลุมทุกปัญหาคอมพิวเตอร์ ทั้งบ้านและสำนักงาน</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="svc-card" data-aos>
+          <div class="svc-icon-wrap svc-blue">💻</div>
+          <h3>ซ่อมคอมพิวเตอร์ PC</h3>
+          <ul class="svc-list">
+            <li>เครื่องช้า / ค้าง / เด้ง</li>
+            <li>ติดไวรัส / มัลแวร์</li>
+            <li>ลง Windows / โปรแกรม</li>
+            <li>เปลี่ยนอะไหล่ทุกชนิด</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>
+
+        <div class="svc-card" data-aos>
+          <div class="svc-icon-wrap svc-purple">💻</div>
+          <h3>ซ่อมโน้ตบุ๊ก</h3>
+          <ul class="svc-list">
+            <li>เปิดไม่ติด / ค้างบ่อย</li>
+            <li>จอดับ / เปลี่ยนจอ</li>
+            <li>เปลี่ยนแบตเตอรี่</li>
+            <li>คีย์บอร์ดเสีย / หน้าจอแตก</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>
+
+        <div class="svc-card" data-aos>
+          <div class="svc-icon-wrap svc-orange">🖨️</div>
+          <h3>ซ่อม Printer</h3>
+          <ul class="svc-list">
+            <li>พิมพ์ไม่ออก / หมึกไม่เข้า</li>
+            <li>กระดาษติด</li>
+            <li>ตั้งค่าพรินเตอร์เครือข่าย</li>
+            <li>เปลี่ยน head / ล้างหัวพิมพ์</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>
+
+        <div class="svc-card" data-aos>
+          <div class="svc-icon-wrap svc-yellow">⚡</div>
+          <h3>อัปเกรด SSD / RAM</h3>
+          <ul class="svc-list">
+            <li>เพิ่มความเร็วเครื่องทันใจ</li>
+            <li>ย้ายข้อมูลทุกไฟล์ ไม่หาย</li>
+            <li>ติดตั้ง Windows ใหม่</li>
+            <li>เพิ่ม RAM รองรับงานหนัก</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>
+
+        <div class="svc-card" data-aos>
+          <div class="svc-icon-wrap svc-teal">🌐</div>
+          <h3>ติดตั้งระบบ Network</h3>
+          <ul class="svc-list">
+            <li>Router / WiFi ให้แรง ไม่มีจุดอับ</li>
+            <li>เดินสาย LAN สำนักงาน</li>
+            <li>แชร์ Printer เครือข่าย</li>
+            <li>แก้ปัญหาเน็ตช้า / หลุด</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">สอบถามบริการนี้ →</a>
+        </div>
+
+        <div class="svc-card svc-card--highlight" data-aos>
+          <div class="svc-icon-wrap svc-navy">🏢</div>
+          <h3>ดูแล IT สำหรับบริษัท</h3>
+          <ul class="svc-list">
+            <li>MA รายเดือน ราคาพิเศษ</li>
+            <li>Remote Support ทันที</li>
+            <li>ตรวจสอบและบำรุงระบบ</li>
+            <li>ให้คำปรึกษาด้าน IT ฟรี</li>
+          </ul>
+          <a href="https://line.me/ti/p/@sarun-it" class="svc-link" target="_blank" rel="noopener">ปรึกษาแพ็กเกจ →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="section section--dark" id="why">
+    <div class="container">
+      <div class="section-head section-head--light">
+        <div class="eyebrow eyebrow--light">⭐ จุดเด่น</div>
+        <h2>ทำไมต้องเลือกเรา?</h2>
+        <p class="section-desc section-desc--light">ประสบการณ์ด้าน IT โดยตรง บริการจริงใจ ไม่มีค่าใช้จ่ายซ่อน</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card" data-aos>
+          <div class="why-icon">🚗</div>
+          <h3>ซ่อมถึงบ้าน</h3>
+          <p>ไม่ต้องยกเครื่องไปไหน ช่างเข้าบริการถึงที่ สะดวกสุด ๆ</p>
+        </div>
+        <div class="why-card" data-aos>
+          <div class="why-icon">💰</div>
+          <h3>แจ้งราคาก่อนซ่อม</h3>
+          <p>บอกราคาให้ทราบก่อนทุกครั้ง ไม่มีค่าใช้จ่ายแอบแฝง</p>
+        </div>
+        <div class="why-card" data-aos>
+          <div class="why-icon">🛡️</div>
+          <h3>รับประกันงานซ่อม</h3>
+          <p>มีการรับประกันหลังซ่อมทุกชิ้นงาน อุ่นใจหลังใช้บริการ</p>
+        </div>
+        <div class="why-card" data-aos>
+          <div class="why-icon">⚡</div>
+          <h3>ตรวจเช็กฟรี</h3>
+          <p>วินิจฉัยอาการเบื้องต้นฟรี ก่อนตัดสินใจซ่อมทุกครั้ง</p>
+        </div>
+        <div class="why-card" data-aos>
+          <div class="why-icon">🔄</div>
+          <h3>รับ-ส่งเครื่อง</h3>
+          <p>บริการรับส่งเครื่องถึงบ้าน ครอบคลุมพื้นที่ท่าฉลอมและใกล้เคียง</p>
+        </div>
+        <div class="why-card" data-aos>
+          <div class="why-icon">🏢</div>
+          <h3>ดูแลทั้งบ้านและออฟฟิศ</h3>
+          <p>รองรับทั้งลูกค้าทั่วไปและองค์กร มีแพ็กเกจ MA รายเดือน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section--gray" id="steps">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">📋 ขั้นตอน</div>
+        <h2>ขั้นตอนการใช้บริการ</h2>
+        <p class="section-desc">ง่าย รวดเร็ว ไม่ยุ่งยาก เพียง 5 ขั้นตอน</p>
+      </div>
+
+      <div class="steps-track">
+        <div class="step-item" data-aos>
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>ติดต่อผ่าน LINE หรือโทร</h4>
+            <p>ทักมาได้เลย ตลอด 7 วัน</p>
           </div>
-          <div class="hero-cta">
-            <a href="https://line.me" class="btn-primary" target="_blank">💬 ติดต่อเรา</a>
-            <button class="btn-secondary" onclick="switchTab('shop')">🛒 ดูสินค้า</button>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step-item" data-aos>
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>แจ้งอาการเสีย</h4>
+            <p>ถ่ายรูปหรือเล่าอาการ</p>
+          </div>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step-item" data-aos>
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>นัดวันและเวลา</h4>
+            <p>เลือกเวลาที่สะดวก</p>
+          </div>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step-item" data-aos>
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>ช่างเข้าบริการ</h4>
+            <p>ซ่อม ณ สถานที่จริง</p>
+          </div>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step-item" data-aos>
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>ทดสอบและรับประกัน</h4>
+            <p>มั่นใจก่อนส่งมอบงาน</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Home Video Section -->
-      <div class="section-wrapper" id="homeVideoSection" style="display:none">
-        <div class="section-label">🎬 วิดีโอแนะนำร้าน</div>
-        <div class="video-wrap" id="homeVideoWrap"></div>
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">🛠️ ผลงาน</div>
+        <h2>ผลงานที่ผ่านมา</h2>
+        <p class="section-desc">ตัวอย่างงานที่เราเคยทำ ช่วยสร้างความมั่นใจในคุณภาพ</p>
       </div>
 
-      <!-- Home Photo Gallery -->
-      <div class="section-wrapper" id="homeGallerySection" style="display:none">
-        <div class="section-label">📸 ผลงานของเรา</div>
-        <div class="gallery-grid" id="homeGallery"></div>
-      </div>
-
-      <div class="section-wrapper">
-        <div class="section-label">📋 เคสล่าสุด</div>
-        <div id="latestCasesWrap">
-          <!-- Rendered by JS -->
+      <div class="portfolio-grid">
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--ssd">
+            <span class="port-emoji">💾</span>
+          </div>
+          <div class="port-info">
+            <h4>เปลี่ยน HDD → SSD</h4>
+            <p>บูตเร็วขึ้น 5 เท่า ย้ายข้อมูลไม่หาย</p>
+            <span class="port-tag">อัปเกรด</span>
+          </div>
+        </div>
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--nb">
+            <span class="port-emoji">💻</span>
+          </div>
+          <div class="port-info">
+            <h4>ซ่อมโน้ตบุ๊ก จอดับ</h4>
+            <p>เปลี่ยนจอใหม่ รับประกัน 3 เดือน</p>
+            <span class="port-tag">งานซ่อม</span>
+          </div>
+        </div>
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--printer">
+            <span class="port-emoji">🖨️</span>
+          </div>
+          <div class="port-info">
+            <h4>ซ่อม Printer Epson</h4>
+            <p>ล้างหัวพิมพ์ ตั้งค่าใหม่ พิมพ์คมชัด</p>
+            <span class="port-tag">งานซ่อม</span>
+          </div>
+        </div>
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--network">
+            <span class="port-emoji">🌐</span>
+          </div>
+          <div class="port-info">
+            <h4>วาง Network สำนักงาน</h4>
+            <p>เดินสาย LAN 20 จุด WiFi ไร้จุดอับ</p>
+            <span class="port-tag">Network</span>
+          </div>
+        </div>
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--virus">
+            <span class="port-emoji">🛡️</span>
+          </div>
+          <div class="port-info">
+            <h4>กำจัดไวรัส / มัลแวร์</h4>
+            <p>ลง Windows ใหม่ เครื่องกลับมาเร็ว</p>
+            <span class="port-tag">ซอฟต์แวร์</span>
+          </div>
+        </div>
+        <div class="port-card" data-aos>
+          <div class="port-img port-img--ma">
+            <span class="port-emoji">🏢</span>
+          </div>
+          <div class="port-info">
+            <h4>MA รายเดือน บริษัท</h4>
+            <p>ดูแลระบบ IT 15 เครื่อง Remote Support</p>
+            <span class="port-tag">IT Support</span>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="section-wrapper">
-        <div class="section-label">⚡ บริการหลัก</div>
-        <div class="quick-grid">
-          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">🖥️</div><div>ซ่อมคอม / โน้ตบุ๊ก</div></div>
-          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">🖨️</div><div>ซ่อม Printer</div></div>
-          <div class="quick-card" onclick="switchTab('network')"><div class="qc-icon">📡</div><div>วาง Network</div></div>
-          <div class="quick-card" onclick="switchTab('software')"><div class="qc-icon">⚙️</div><div>เขียนโปรแกรม</div></div>
-          <div class="quick-card" onclick="switchTab('repair')"><div class="qc-icon">💾</div><div>อัปเกรด SSD</div></div>
-          <div class="quick-card"><div class="qc-icon">🏠</div><div>ซ่อมถึงบ้าน</div></div>
+  <!-- ===== REVIEWS ===== -->
+  <section class="section section--gray" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">💬 รีวิว</div>
+        <h2>รีวิวจากลูกค้าจริง</h2>
+        <p class="section-desc">ความคิดเห็นจากผู้ใช้บริการจริง ไม่มีการปั้นรีวิว</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"เครื่องเร็วขึ้นมากหลังเปลี่ยน SSD ซ่อมถึงบ้าน ไม่ต้องยกไปไหน สะดวกมาก"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">ส</div>
+            <div>
+              <strong>คุณสมชาย</strong>
+              <span>ลูกค้า PC Desktop</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"โน้ตบุ๊กจอดับ ช่างมาซ่อมถึงบ้าน เปลี่ยนจอเสร็จภายในวันเดียว ราคาตามที่บอกไว้เป๊ะ"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">ว</div>
+            <div>
+              <strong>คุณวิภา</strong>
+              <span>ลูกค้า Notebook</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"Printer ใช้งานได้ปกติแล้ว ตั้งค่าเครือข่ายให้ด้วย พิมพ์จากมือถือได้เลย ประทับใจมาก"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">น</div>
+            <div>
+              <strong>คุณนิตยา</strong>
+              <span>ลูกค้า Printer</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"ทำ MA รายเดือนให้บริษัท ดูแลดี Remote Support ไว ปัญหา IT แทบไม่มีแล้ว"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">ป</div>
+            <div>
+              <strong>คุณประพัทธ์</strong>
+              <span>ลูกค้า IT Support</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"วาง Network บ้านใหม่ WiFi แรงทุกห้อง ช่างแนะนำอุปกรณ์ที่คุ้มค่า ไม่ขายของเกิน"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">ม</div>
+            <div>
+              <strong>คุณมานะ</strong>
+              <span>ลูกค้า Network</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"เครื่องติดไวรัสหนักมาก ช่างจัดการได้เรียบร้อย ลง Windows ใหม่ เร็วเหมือนเครื่องใหม่เลย"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">ก</div>
+            <div>
+              <strong>คุณกิตติ</strong>
+              <span>ลูกค้า PC Desktop</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== REPAIR TAB ===== -->
-    <section class="tab-content" id="tab-repair">
-      <div class="page-hero mini">
-        <h2>🔧 งานซ่อม</h2>
-        <p>คอมช้า คอมเสีย ไม่ต้องยกไปไหน! มีบริการซ่อมถึงบ้านในพื้นที่ท่าฉลอม – สมุทรสาคร</p>
+  <!-- ===== AREA ===== -->
+  <section class="section" id="area">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">📍 พื้นที่บริการ</div>
+        <h2>พื้นที่ที่เราให้บริการ</h2>
+        <p class="section-desc">ครอบคลุมพื้นที่สมุทรสาคร และบริเวณใกล้เคียง</p>
       </div>
 
-      <!-- Repair Video -->
-      <div class="section-wrapper" id="repairVideoSection" style="display:none">
-        <div class="section-label">🎬 วิดีโองานซ่อม</div>
-        <div class="video-wrap" id="repairVideoWrap"></div>
-      </div>
-
-      <!-- Repair Gallery -->
-      <div class="section-wrapper" id="repairGallerySection" style="display:none">
-        <div class="section-label">📸 ตัวอย่างงานซ่อม</div>
-        <div class="gallery-grid" id="repairGallery"></div>
-      </div>
-
-      <div class="section-wrapper">
-        <div class="service-list" id="repairServiceList">
-          <!-- Rendered by JS -->
+      <div class="area-map-wrap">
+        <div class="area-pills">
+          <div class="area-pill active"><span>🗺️</span> ท่าฉลอม</div>
+          <div class="area-pill"><span>🗺️</span> มหาชัย</div>
+          <div class="area-pill"><span>🗺️</span> พันท้ายนรสิงห์</div>
+          <div class="area-pill"><span>🗺️</span> บางน้ำจืด</div>
+          <div class="area-pill"><span>🗺️</span> โคกขาม</div>
+          <div class="area-pill"><span>🗺️</span> สมุทรสาคร</div>
+          <div class="area-pill area-pill--more">+ พื้นที่ใกล้เคียง</div>
+        </div>
+        <div class="area-note">
+          <span class="note-icon">ℹ️</span>
+          <span>นอกพื้นที่? ทักมาสอบถามได้เลย อาจมีค่าเดินทางเพิ่มเติม</span>
+        </div>
+        <!-- Google Maps Embed -->
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31146.73!2d100.28!3d13.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2b0f8b4b4b4b5%3A0x0!2z4Lii4Liq4LiB4Liy4Lij!5e0!3m2!1sth!2sth!4v1234567890"
+            width="100%" height="300" style="border:0;border-radius:12px"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="แผนที่ท่าฉลอม สมุทรสาคร">
+          </iframe>
         </div>
       </div>
-      <div class="section-wrapper">
-        <div class="free-check-banner">
-          <span>✅ ตรวจเช็ก / ให้คำปรึกษาฟรี ก่อนตัดสินใจ</span>
-          <a href="https://line.me" class="btn-primary small" target="_blank">นัดวันนี้</a>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--gray" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">❓ FAQ</div>
+        <h2>คำถามที่พบบ่อย</h2>
+        <p class="section-desc">ข้อสงสัยที่ลูกค้าถามบ่อย ตอบให้ครบ</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>ซ่อมถึงบ้านคิดค่าเดินทางไหม?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            ฟรีในพื้นที่ท่าฉลอม – สมุทรสาคร และบริเวณใกล้เคียง สำหรับพื้นที่ไกลออกไปอาจมีค่าเดินทางเพิ่มเล็กน้อย แต่จะแจ้งให้ทราบก่อนทุกครั้ง
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>ใช้เวลาซ่อมนานแค่ไหน?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            ขึ้นอยู่กับประเภทงาน งานทั่วไปอย่างลง Windows หรือกำจัดไวรัสใช้เวลา 1–3 ชั่วโมง งานเปลี่ยนอะไหล่อาจใช้เวลา 1–2 วัน (รอชิ้นส่วน) จะแจ้งระยะเวลาก่อนเริ่มงานทุกครั้ง
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>รับประกันงานซ่อมหรือไม่?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            รับประกันงานซ่อมทุกชิ้นงาน ระยะเวลารับประกันขึ้นอยู่กับประเภทงาน เช่น งานซอฟต์แวร์รับประกัน 30 วัน งานเปลี่ยนอะไหล่รับประกัน 90 วัน จะแจ้งเงื่อนไขให้ทราบก่อนทุกครั้ง
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>รับซ่อมวันหยุดหรือนอกเวลาได้ไหม?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            รับบริการตามนัดหมาย รวมถึงวันหยุดและนอกเวลาทำการ ขึ้นอยู่กับตารางนัดหมาย ทักมาสอบถามล่วงหน้าได้เลยครับ
+          </div>
+        </div>
+        <div class="faq-item" data-aos>
+          <button class="faq-q" aria-expanded="false">
+            <span>ถ้าซ่อมไม่ได้จะคิดเงินไหม?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            ไม่คิดค่าตรวจเช็กเบื้องต้น หากซ่อมไม่ได้หรือซ่อมแล้วไม่คุ้ม จะแจ้งให้ทราบพร้อมเสนอทางเลือกอื่น โดยไม่คิดค่าบริการตรวจ
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== NETWORK TAB ===== -->
-    <section class="tab-content" id="tab-network">
-      <div class="page-hero mini">
-        <h2>🌐 บริการเครือข่าย</h2>
-        <p>แก้ปัญหาเน็ตช้า เน็ตหลุด วาง LAN ติดตั้ง WiFi ครอบคลุมทุกจุด</p>
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--dark" id="contact">
+    <div class="container">
+      <div class="section-head section-head--light">
+        <div class="eyebrow eyebrow--light">📞 ติดต่อเรา</div>
+        <h2>พร้อมให้บริการทุกวัน</h2>
+        <p class="section-desc section-desc--light">ติดต่อได้หลายช่องทาง สะดวกแบบไหนก็ได้</p>
       </div>
 
-      <!-- Network Video -->
-      <div class="section-wrapper" id="networkVideoSection" style="display:none">
-        <div class="section-label">🎬 วิดีโองานเครือข่าย</div>
-        <div class="video-wrap" id="networkVideoWrap"></div>
-      </div>
-
-      <!-- Network Gallery -->
-      <div class="section-wrapper" id="networkGallerySection" style="display:none">
-        <div class="section-label">📸 ตัวอย่างงานเครือข่าย</div>
-        <div class="gallery-grid" id="networkGallery"></div>
-      </div>
-
-      <div class="section-wrapper">
-        <div class="net-cards" id="networkCardList">
-          <!-- Rendered by JS -->
+      <div class="contact-grid">
+        <a href="https://line.me/ti/p/@sarun-it" class="contact-card contact-card--line" target="_blank" rel="noopener">
+          <div class="contact-icon">💬</div>
+          <h3>LINE Official</h3>
+          <p>@sarun-it</p>
+          <span class="contact-action">เปิด LINE →</span>
+        </a>
+        <a href="tel:0800000000" class="contact-card contact-card--tel">
+          <div class="contact-icon">📞</div>
+          <h3>โทรศัพท์</h3>
+          <p>080-000-0000</p>
+          <span class="contact-action">โทรเลย →</span>
+        </a>
+        <a href="https://facebook.com/sarun-it" class="contact-card contact-card--fb" target="_blank" rel="noopener">
+          <div class="contact-icon">📘</div>
+          <h3>Facebook Page</h3>
+          <p>Sarun IT Service</p>
+          <span class="contact-action">ดูเพจ →</span>
+        </a>
+        <div class="contact-card contact-card--hours">
+          <div class="contact-icon">🕒</div>
+          <h3>เวลาทำการ</h3>
+          <p>จันทร์ – เสาร์<br>09:00 – 18:00 น.</p>
+          <span class="contact-action contact-action--muted">นัดล่วงหน้าได้ทุกวัน</span>
         </div>
       </div>
-    </section>
-
-    <!-- ===== SOFTWARE TAB ===== -->
-    <section class="tab-content" id="tab-software">
-      <div class="page-hero mini">
-        <h2>💻 งานโปรแกรม</h2>
-        <p>รับเขียนโปรแกรมและระบบงานตามความต้องการ ครบจบที่เดียว</p>
-      </div>
-
-      <!-- Software Video -->
-      <div class="section-wrapper" id="softwareVideoSection" style="display:none">
-        <div class="section-label">🎬 วิดีโองานโปรแกรม</div>
-        <div class="video-wrap" id="softwareVideoWrap"></div>
-      </div>
-
-      <!-- Software Gallery -->
-      <div class="section-wrapper" id="softwareGallerySection" style="display:none">
-        <div class="section-label">📸 ตัวอย่างผลงาน</div>
-        <div class="gallery-grid" id="softwareGallery"></div>
-      </div>
-
-      <div class="section-wrapper">
-        <div class="soft-grid" id="softwareCardList">
-          <!-- Rendered by JS -->
-        </div>
-        <div class="free-check-banner" style="margin-top:2rem">
-          <span>💡 ปรึกษาความต้องการระบบฟรี ไม่มีข้อผูกมัด</span>
-          <a href="https://line.me" class="btn-primary small" target="_blank">ติดต่อเรา</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SHOP TAB ===== -->
-    <section class="tab-content" id="tab-shop">
-      <div class="page-hero mini">
-        <h2>🛒 ร้านค้า – ท่าฉลอมคอมพิวเตอร์</h2>
-        <p>จำหน่ายอุปกรณ์คอมพิวเตอร์คุณภาพดี ราคาเป็นกันเอง</p>
-      </div>
-      <div class="section-wrapper">
-        <div class="cat-filter" id="catFilter">
-          <button class="cat-btn active" data-cat="all">ทั้งหมด</button>
-          <button class="cat-btn" data-cat="desktop">🖥️ PC Desktop</button>
-          <button class="cat-btn" data-cat="notebook">💻 Notebook</button>
-          <button class="cat-btn" data-cat="printer">🖨️ Printer</button>
-          <button class="cat-btn" data-cat="accessories">🖱️ อุปกรณ์เสริม</button>
-        </div>
-        <div class="product-grid" id="productGrid"></div>
-      </div>
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="logo.jpg" alt="Logo" class="footer-logo" id="footerLogo" />
-        <div>
-          <strong>ท่าฉลอมคอมพิวเตอร์</strong>
-          <p>ท่าฉลอม – สมุทรสาคร</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand-icon brand-icon--sm">🔧</div>
+          <div>
+            <strong>Sarun IT Service</strong>
+            <p>บริการซ่อมคอมพิวเตอร์ถึงบ้าน<br>ท่าฉลอม – สมุทรสาคร</p>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h5>บริการ</h5>
+          <a href="#services">ซ่อมคอมพิวเตอร์</a>
+          <a href="#services">ซ่อมโน้ตบุ๊ก</a>
+          <a href="#services">ซ่อม Printer</a>
+          <a href="#services">อัปเกรด SSD</a>
+          <a href="#services">ติดตั้ง Network</a>
+        </div>
+        <div class="footer-links-col">
+          <h5>ข้อมูล</h5>
+          <a href="#why">จุดเด่น</a>
+          <a href="#portfolio">ผลงาน</a>
+          <a href="#reviews">รีวิว</a>
+          <a href="#area">พื้นที่บริการ</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-contact-col">
+          <h5>ติดต่อ</h5>
+          <p>📞 080-000-0000</p>
+          <p>💬 LINE: @sarun-it</p>
+          <p>📍 ท่าฉลอม สมุทรสาคร</p>
+          <p>🕒 จ-ส 09:00–18:00</p>
         </div>
       </div>
-      <div class="footer-links">
-        <p>📞 ติดต่อสอบถาม</p>
-        <p>💬 Line: @tachalom</p>
-        <p>🕐 เปิด จ-ส 09:00–18:00</p>
-      </div>
-      <div class="footer-note">
-        <p>© 2025 ท่าฉลอมคอมพิวเตอร์</p>
-        <p>All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>© 2025 Sarun IT Service · All rights reserved</p>
+        <p>ออกแบบสำหรับ GitHub Pages</p>
       </div>
     </div>
   </footer>
 
-  <!-- ===== ADMIN LOGIN MODAL ===== -->
-  <div class="modal-overlay" id="loginModal">
-    <div class="modal-box">
-      <div class="modal-header">
-        <img src="logo.jpg" alt="Logo" class="modal-logo" />
-        <h3>เข้าสู่ระบบ Admin</h3>
-        <p>ท่าฉลอมคอมพิวเตอร์</p>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>ชื่อผู้ใช้</label>
-          <input type="text" id="loginUser" placeholder="admin" autocomplete="username" />
-        </div>
-        <div class="form-group">
-          <label>รหัสผ่าน</label>
-          <div class="pw-wrap">
-            <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" />
-            <button class="pw-toggle" onclick="togglePw('loginPass', this)">👁️</button>
-          </div>
-        </div>
-        <div class="form-error" id="loginError"></div>
-        <button class="btn-primary full" onclick="doLogin()">เข้าสู่ระบบ</button>
-        <button class="btn-ghost full" onclick="closeModal('loginModal')" style="margin-top:.5rem">ยกเลิก</button>
-      </div>
-    </div>
-  </div>
+  <!-- ===== FLOAT LINE BUTTON ===== -->
+  <a href="https://line.me/ti/p/@sarun-it" class="float-line" target="_blank" rel="noopener" aria-label="ติดต่อผ่าน LINE">
+    💬
+  </a>
 
-  <!-- ===== ADMIN PANEL ===== -->
-  <div class="modal-overlay" id="adminPanel">
-    <div class="modal-box wide">
-      <div class="admin-header">
-        <div class="admin-title">
-          <span class="admin-badge">⚙️ Admin Panel</span>
-          <h3 id="adminPanelTitle">จัดการสินค้า</h3>
-        </div>
-        <div class="admin-header-actions">
-          <button class="btn-refresh small" onclick="window.location.reload()" title="รีเฟรชหน้าเว็บ">🔄 รีเฟรช</button>
-          <button class="btn-danger small" onclick="doLogout()">ออกจากระบบ</button>
-          <button class="modal-close" onclick="closeModal('adminPanel')">✕</button>
-        </div>
-      </div>
-
-      <!-- Admin Sub-tabs -->
-      <div class="admin-subtabs">
-        <button class="admin-tab-btn active" data-section="products" onclick="switchAdminSection('products')">🛒 สินค้า</button>
-        <button class="admin-tab-btn" data-section="repair" onclick="switchAdminSection('repair')">🔧 งานซ่อม</button>
-        <button class="admin-tab-btn" data-section="network" onclick="switchAdminSection('network')">🌐 เครือข่าย</button>
-        <button class="admin-tab-btn" data-section="software" onclick="switchAdminSection('software')">💻 โปรแกรม</button>
-        <button class="admin-tab-btn" data-section="media" onclick="switchAdminSection('media')">🖼️ รูป/วิดีโอ</button>
-      </div>
-
-      <!-- SECTION: Products -->
-      <div class="admin-section active" id="admin-products">
-        <div class="admin-section-toolbar">
-          <button class="btn-primary small" onclick="openProductForm()">+ เพิ่มสินค้าใหม่</button>
-        </div>
-        <div class="admin-stats" id="adminStats"></div>
-        <div class="admin-table-wrap">
-          <table class="admin-table" id="adminTable">
-            <thead>
-              <tr>
-                <th>รูป/ไอคอน</th>
-                <th>ชื่อสินค้า</th>
-                <th>หมวดหมู่</th>
-                <th>รายละเอียด</th>
-                <th>ราคา</th>
-                <th>สถานะ</th>
-                <th>จัดการ</th>
-              </tr>
-            </thead>
-            <tbody id="adminTableBody"></tbody>
-          </table>
-        </div>
-        <div class="pw-section">
-          <h4>🔑 เปลี่ยนรหัสผ่าน Admin</h4>
-          <div class="pw-change-row">
-            <div class="pw-wrap">
-              <input type="password" id="newPw1" placeholder="รหัสผ่านใหม่" />
-              <button class="pw-toggle" onclick="togglePw('newPw1', this)">👁️</button>
-            </div>
-            <div class="pw-wrap">
-              <input type="password" id="newPw2" placeholder="ยืนยันรหัสผ่านใหม่" />
-              <button class="pw-toggle" onclick="togglePw('newPw2', this)">👁️</button>
-            </div>
-            <button class="btn-primary small" onclick="changePassword()">บันทึก</button>
-          </div>
-          <div class="form-error" id="pwError"></div>
-        </div>
-      </div>
-
-      <!-- SECTION: Repair Items -->
-      <div class="admin-section" id="admin-repair">
-        <div class="admin-section-toolbar">
-          <button class="btn-primary small" onclick="openServiceForm('repair')">+ เพิ่มรายการซ่อม</button>
-        </div>
-        <div class="admin-table-wrap">
-          <table class="admin-table">
-            <thead>
-              <tr><th>#</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
-            </thead>
-            <tbody id="repairTableBody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- SECTION: Network Items -->
-      <div class="admin-section" id="admin-network">
-        <div class="admin-section-toolbar">
-          <button class="btn-primary small" onclick="openServiceForm('network')">+ เพิ่มบริการเครือข่าย</button>
-        </div>
-        <div class="admin-table-wrap">
-          <table class="admin-table">
-            <thead>
-              <tr><th>ไอคอน</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
-            </thead>
-            <tbody id="networkTableBody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- SECTION: Software Items -->
-      <div class="admin-section" id="admin-software">
-        <div class="admin-section-toolbar">
-          <button class="btn-primary small" onclick="openServiceForm('software')">+ เพิ่มบริการโปรแกรม</button>
-        </div>
-        <div class="admin-table-wrap">
-          <table class="admin-table">
-            <thead>
-              <tr><th>ไอคอน</th><th>หัวข้อ</th><th>รายละเอียด</th><th>จัดการ</th></tr>
-            </thead>
-            <tbody id="softwareTableBody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- SECTION: Media (Images & Videos) -->
-      <div class="admin-section" id="admin-media">
-        <div class="admin-media-grid">
-
-          <!-- Logo -->
-          <div class="media-card">
-            <h4>🖼️ โลโก้ร้าน</h4>
-            <img id="previewLogo" src="logo.jpg" class="media-preview-img" alt="Logo Preview" />
-            <label class="upload-label">
-              <input type="file" accept="image/*" onchange="uploadMedia('logo', this)" />
-              📂 เปลี่ยนโลโก้
-            </label>
-          </div>
-
-          <!-- Home Page Gallery -->
-          <div class="media-card">
-            <h4>📸 แกลเลอรี่หน้าหลัก</h4>
-            <div class="mini-gallery" id="adminHomeGallery"></div>
-            <label class="upload-label">
-              <input type="file" accept="image/*" multiple onchange="uploadGallery('home', this)" />
-              📂 เพิ่มรูปภาพ
-            </label>
-          </div>
-
-          <!-- Repair Gallery -->
-          <div class="media-card">
-            <h4>📸 รูปงานซ่อม</h4>
-            <div class="mini-gallery" id="adminRepairGallery"></div>
-            <label class="upload-label">
-              <input type="file" accept="image/*" multiple onchange="uploadGallery('repair', this)" />
-              📂 เพิ่มรูปภาพ
-            </label>
-          </div>
-
-          <!-- Network Gallery -->
-          <div class="media-card">
-            <h4>📸 รูปงานเครือข่าย</h4>
-            <div class="mini-gallery" id="adminNetworkGallery"></div>
-            <label class="upload-label">
-              <input type="file" accept="image/*" multiple onchange="uploadGallery('network', this)" />
-              📂 เพิ่มรูปภาพ
-            </label>
-          </div>
-
-          <!-- Software Gallery -->
-          <div class="media-card">
-            <h4>📸 รูปผลงานโปรแกรม</h4>
-            <div class="mini-gallery" id="adminSoftwareGallery"></div>
-            <label class="upload-label">
-              <input type="file" accept="image/*" multiple onchange="uploadGallery('software', this)" />
-              📂 เพิ่มรูปภาพ
-            </label>
-          </div>
-
-          <!-- Videos (YouTube URL) -->
-          <div class="media-card full-width">
-            <h4>🎬 วิดีโอ YouTube (ใส่ URL หรือ Embed ID)</h4>
-            <div class="video-url-grid">
-              <div class="form-group">
-                <label>🏠 วิดีโอหน้าหลัก</label>
-                <div class="video-input-row">
-                  <input type="text" id="videoHome" placeholder="https://www.youtube.com/watch?v=..." />
-                  <button class="btn-primary small" onclick="saveVideoUrl('home')">บันทึก</button>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>🔧 วิดีโองานซ่อม</label>
-                <div class="video-input-row">
-                  <input type="text" id="videoRepair" placeholder="https://www.youtube.com/watch?v=..." />
-                  <button class="btn-primary small" onclick="saveVideoUrl('repair')">บันทึก</button>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>🌐 วิดีโอเครือข่าย</label>
-                <div class="video-input-row">
-                  <input type="text" id="videoNetwork" placeholder="https://www.youtube.com/watch?v=..." />
-                  <button class="btn-primary small" onclick="saveVideoUrl('network')">บันทึก</button>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>💻 วิดีโอโปรแกรม</label>
-                <div class="video-input-row">
-                  <input type="text" id="videoSoftware" placeholder="https://www.youtube.com/watch?v=..." />
-                  <button class="btn-primary small" onclick="saveVideoUrl('software')">บันทึก</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ===== PRODUCT FORM MODAL ===== -->
-  <div class="modal-overlay" id="productModal">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h3 id="productFormTitle">เพิ่มสินค้าใหม่</h3>
-      </div>
-      <div class="modal-body">
-        <input type="hidden" id="productId" />
-
-        <!-- Product Image Upload -->
-        <div class="form-group">
-          <label>รูปสินค้า (อัปโหลดรูปจริง)</label>
-          <div class="prod-img-upload-area">
-            <div class="prod-img-preview" id="prodImgPreview">
-              <span id="prodImgPlaceholder">📷 คลิกเพื่อเลือกรูป</span>
-              <img id="prodImgThumb" src="" alt="" style="display:none" />
-            </div>
-            <div class="prod-img-actions">
-              <label class="upload-label small">
-                <input type="file" id="productImageFile" accept="image/*" onchange="previewProductImage(this)" />
-                📂 เลือกรูปภาพ
-              </label>
-              <button class="btn-ghost small" onclick="clearProductImage()">🗑️ ลบรูป</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>ไอคอน Emoji (ถ้าไม่มีรูป)</label>
-            <div class="emoji-row">
-              <input type="text" id="productIcon" placeholder="🖥️" maxlength="4" />
-              <div class="emoji-presets">
-                <span onclick="setEmoji('🖥️')">🖥️</span>
-                <span onclick="setEmoji('💻')">💻</span>
-                <span onclick="setEmoji('🖨️')">🖨️</span>
-                <span onclick="setEmoji('🖱️')">🖱️</span>
-                <span onclick="setEmoji('⌨️')">⌨️</span>
-                <span onclick="setEmoji('💾')">💾</span>
-                <span onclick="setEmoji('📡')">📡</span>
-                <span onclick="setEmoji('🔌')">🔌</span>
-                <span onclick="setEmoji('📷')">📷</span>
-                <span onclick="setEmoji('🎧')">🎧</span>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>หมวดหมู่</label>
-            <select id="productCat">
-              <option value="desktop">🖥️ PC Desktop</option>
-              <option value="notebook">💻 Notebook</option>
-              <option value="printer">🖨️ Printer</option>
-              <option value="accessories">🖱️ อุปกรณ์เสริม</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>ชื่อสินค้า</label>
-          <input type="text" id="productName" placeholder="เช่น Epson L3250 Wi-Fi" />
-        </div>
-        <div class="form-group">
-          <label>รายละเอียด</label>
-          <input type="text" id="productDesc" placeholder="เช่น พิมพ์ / สแกน / ถ่ายเอกสาร" />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>ราคา (บาท)</label>
-            <input type="number" id="productPrice" placeholder="0" min="0" />
-          </div>
-          <div class="form-group">
-            <label>ป้ายราคา (ถ้าไม่ระบุใช้ตัวเลขอัตโนมัติ)</label>
-            <input type="text" id="productPriceLabel" placeholder="เช่น ฿ 790 ขึ้นไป" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>สถานะ</label>
-          <select id="productStatus">
-            <option value="available">✅ มีสินค้า</option>
-            <option value="preorder">🕐 สั่งจองได้</option>
-            <option value="sold">❌ สินค้าหมด</option>
-          </select>
-        </div>
-        <div class="form-error" id="productError"></div>
-        <div class="modal-actions">
-          <button class="btn-primary full" onclick="saveProduct()">💾 บันทึกสินค้า</button>
-          <button class="btn-ghost full" onclick="closeModal('productModal')">ยกเลิก</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== SERVICE FORM MODAL (repair / network / software) ===== -->
-  <div class="modal-overlay" id="serviceModal">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h3 id="serviceFormTitle">เพิ่มรายการ</h3>
-      </div>
-      <div class="modal-body">
-        <input type="hidden" id="serviceType" />
-        <input type="hidden" id="serviceId" />
-
-        <!-- Service Image Upload -->
-        <div class="form-group">
-          <label>รูปประกอบ (ถ้ามี)</label>
-          <div class="prod-img-upload-area">
-            <div class="prod-img-preview" id="svcImgPreview">
-              <span id="svcImgPlaceholder">📷 คลิกเพื่อเลือกรูป</span>
-              <img id="svcImgThumb" src="" alt="" style="display:none" />
-            </div>
-            <div class="prod-img-actions">
-              <label class="upload-label small">
-                <input type="file" id="serviceImageFile" accept="image/*" onchange="previewServiceImage(this)" />
-                📂 เลือกรูปภาพ
-              </label>
-              <button class="btn-ghost small" onclick="clearServiceImage()">🗑️ ลบรูป</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>ไอคอน Emoji</label>
-          <div class="emoji-row">
-            <input type="text" id="serviceIcon" placeholder="🔧" maxlength="4" />
-            <div class="emoji-presets">
-              <span onclick="setSvcEmoji('🔧')">🔧</span>
-              <span onclick="setSvcEmoji('🖥️')">🖥️</span>
-              <span onclick="setSvcEmoji('🖨️')">🖨️</span>
-              <span onclick="setSvcEmoji('📡')">📡</span>
-              <span onclick="setSvcEmoji('📶')">📶</span>
-              <span onclick="setSvcEmoji('🛠️')">🛠️</span>
-              <span onclick="setSvcEmoji('💻')">💻</span>
-              <span onclick="setSvcEmoji('📦')">📦</span>
-              <span onclick="setSvcEmoji('🗂️')">🗂️</span>
-              <span onclick="setSvcEmoji('🌐')">🌐</span>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>หัวข้อ</label>
-          <input type="text" id="serviceTitle" placeholder="เช่น ซ่อมคอม / โน้ตบุ๊ก ทุกอาการ" />
-        </div>
-        <div class="form-group">
-          <label>รายละเอียด</label>
-          <textarea id="serviceDesc" rows="3" placeholder="อธิบายรายละเอียดบริการ..."></textarea>
-        </div>
-        <div class="form-error" id="serviceError"></div>
-        <div class="modal-actions">
-          <button class="btn-primary full" onclick="saveService()">💾 บันทึก</button>
-          <button class="btn-ghost full" onclick="closeModal('serviceModal')">ยกเลิก</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== DELETE CONFIRM MODAL ===== -->
-  <div class="modal-overlay" id="deleteModal">
-    <div class="modal-box small">
-      <div class="modal-body" style="text-align:center;padding:2rem">
-        <div style="font-size:3rem;margin-bottom:1rem">🗑️</div>
-        <h3 style="margin-bottom:.5rem">ลบรายการนี้?</h3>
-        <p id="deleteProductName" style="color:var(--text-muted);margin-bottom:1.5rem"></p>
-        <div style="display:flex;gap:.75rem">
-          <button class="btn-danger full" onclick="confirmDelete()">ลบเลย</button>
-          <button class="btn-ghost full" onclick="closeModal('deleteModal')">ยกเลิก</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Image Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <img id="lightboxImg" src="" alt="" />
-  </div>
-
-  <!-- Toast container -->
-  <div id="toastContainer"></div>
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="กลับขึ้นข้างบน">↑</button>
 
   <script src="script.js"></script>
 </body>
